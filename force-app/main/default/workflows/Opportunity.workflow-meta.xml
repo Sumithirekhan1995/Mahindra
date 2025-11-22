@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Capture_CreatedDateTime</fullName>
+        <field>CreatedDateTime__c</field>
+        <formula>NOW()</formula>
+        <name>Capture CreatedDateTime</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>DealerName</fullName>
+        <field>DealerName__c</field>
+        <formula>Dealer__r.Name</formula>
+        <name>DealerName</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateCategory</fullName>
+        <field>Category__c</field>
+        <literalValue>DNC</literalValue>
+        <name>UpdateCategory</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateCategoryC</fullName>
+        <field>Category__c</field>
+        <literalValue>Complaint</literalValue>
+        <name>UpdateCategory</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateCategoryCol</fullName>
+        <field>Category__c</field>
+        <literalValue>Cold</literalValue>
+        <name>UpdateCategoryCol</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateCategoryHot1</fullName>
+        <field>Category__c</field>
+        <literalValue>Hot</literalValue>
+        <name>UpdateCategoryHot1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateCategoryWarm1</fullName>
+        <field>Category__c</field>
+        <literalValue>Warm</literalValue>
+        <name>UpdateCategoryWarm1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_DealerName</fullName>
+        <field>DealerName__c</field>
+        <formula>Dealer__r.Name</formula>
+        <name>Update DealerName</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Field</fullName>
+        <field>Lead_Owner__c</field>
+        <formula>Lead__r.Owner:Queue.QueueName</formula>
+        <name>Update Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Opportunity_Stage</fullName>
+        <field>StageName</field>
+        <literalValue>Closed Lost</literalValue>
+        <name>Update Opportunity Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PunchedDate</fullName>
+        <field>Warr_PunchedDate__c</field>
+        <formula>DATETIMEVALUE(RIGHT(LEFT( Warranty_Punched_Date__c , FIND(&quot; &quot;, Warranty_Punched_Date__c ) - 1), 4)
+&amp; &quot;-&quot; &amp;
+LEFT(Warranty_Punched_Date__c , FIND(&quot;/&quot;, Warranty_Punched_Date__c ) - 1)
+&amp; &quot;-&quot; &amp;
+LEFT(
+MID( Warranty_Punched_Date__c , FIND(&quot;/&quot;, Warranty_Punched_Date__c ) + 1, 4),
+FIND(&quot;/&quot;, MID(Warranty_Punched_Date__c , FIND(&quot;/&quot;, Warranty_Punched_Date__c ) + 1, 4)) - 1)
+&amp; &quot; &quot; &amp;
+MID(Warranty_Punched_Date__c ,
+FIND(&quot; &quot;, Warranty_Punched_Date__c ),
+LEN(Warranty_Punched_Date__c ) - FIND(&quot; &quot;,Warranty_Punched_Date__c )-4)+&quot;00&quot;
+) - (330/1440)</formula>
+        <name>Update PunchedDate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Punched_Date</fullName>
+        <field>Warr_EndDate__c</field>
+        <formula>DATETIMEVALUE(RIGHT(LEFT( Warranty_End_Date__c , FIND(&quot; &quot;, Warranty_End_Date__c ) - 1), 4)
+&amp; &quot;-&quot; &amp;
+LEFT(Warranty_End_Date__c , FIND(&quot;/&quot;, Warranty_End_Date__c ) - 1)
+&amp; &quot;-&quot; &amp;
+LEFT(
+MID(Warranty_End_Date__c , FIND(&quot;/&quot;, Warranty_End_Date__c ) + 1, 4),
+FIND(&quot;/&quot;, MID(Warranty_End_Date__c , FIND(&quot;/&quot;, Warranty_End_Date__c ) + 1, 4)) - 1)
+&amp; &quot; &quot; &amp;
+MID(Warranty_End_Date__c ,
+FIND(&quot; &quot;, Warranty_End_Date__c ),
+LEN(Warranty_End_Date__c ) - FIND(&quot; &quot;,Warranty_End_Date__c )-4)+&quot;00&quot;
+) - (330/1440)</formula>
+        <name>Update Punched Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage</fullName>
+        <field>StageName</field>
+        <literalValue>Closed Lost</literalValue>
+        <name>Update Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_StartDate</fullName>
+        <field>Warr_Startdate__c</field>
+        <formula>DATETIMEVALUE(RIGHT(LEFT( Warranty_Start_Date__c , FIND(&quot; &quot;, Warranty_Start_Date__c ) - 1), 4)
+&amp; &quot;-&quot; &amp;
+LEFT(Warranty_Start_Date__c , FIND(&quot;/&quot;, Warranty_Start_Date__c ) - 1)
+&amp; &quot;-&quot; &amp;
+LEFT(
+MID(Warranty_Start_Date__c , FIND(&quot;/&quot;, Warranty_Start_Date__c ) + 1, 4),
+FIND(&quot;/&quot;, MID(Warranty_Start_Date__c , FIND(&quot;/&quot;, Warranty_Start_Date__c ) + 1, 4)) - 1)
+&amp; &quot; &quot; &amp;
+MID(Warranty_Start_Date__c ,
+FIND(&quot; &quot;, Warranty_Start_Date__c ),
+LEN(Warranty_Start_Date__c ) - FIND(&quot; &quot;,Warranty_Start_Date__c )-4)+&quot;00&quot;
+) - (330/1440)</formula>
+        <name>Update StartDate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_dealer_code</fullName>
+        <field>Dealer_Code__c</field>
+        <formula>Dealer__r.Code__c</formula>
+        <name>Update dealer code</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Capture Created Date</fullName>
+        <actions>
+            <name>Capture_CreatedDateTime</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.CreatedById</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>CreateFollowupTaskOnOpp</fullName>
+        <actions>
+            <name>Followup_Task</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT(ISBLANK( Fin_Follow_up_Date_Time__c )) &amp;&amp; ISCHANGED(Fin_Follow_up_Date_Time__c ) &amp;&amp; RecordType.Name = &apos;Finance&apos;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>MarkStageAsClosedLost</fullName>
+        <actions>
+            <name>Update_Opportunity_Stage</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>RecordType.Name  =  &apos;Finance&apos; &amp;&amp; OR( ISPICKVAL( status__c , &apos;Wrong Number&apos;),      ISPICKVAL( status__c , &apos;Clash&apos;),      ISPICKVAL( status__c , &apos;Not Applicable&apos;),     ISPICKVAL( status__c , &apos;Lost&apos;),     ISPICKVAL( status__c , &apos;Closed&apos;)     )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update DealerName</fullName>
+        <actions>
+            <name>Update_DealerName</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_dealer_code</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT(ISBLANK( CreatedDate ))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Lead Lookup</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Lead Owner</fullName>
+        <actions>
+            <name>Update_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>NOT(ISNULL(Lead__c  ) )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Opp Stage</fullName>
+        <actions>
+            <name>Update_Stage</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.status__c</field>
+            <operation>equals</operation>
+            <value>Not interested</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Seller Car</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Warranty End Date</fullName>
+        <actions>
+            <name>Update_Punched_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>IF(ISNEW(), NOT(ISBLANK( Warranty_End_Date__c )), AND(NOT(ISBLANK(Warranty_End_Date__c )) ,ISCHANGED(Warranty_End_Date__c )) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Warranty Punched Date</fullName>
+        <actions>
+            <name>Update_PunchedDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>IF(ISNEW(), NOT(ISBLANK(  Warranty_Punched_Date__c )), AND(NOT(ISBLANK(Warranty_Punched_Date__c )) ,ISCHANGED(Warranty_Punched_Date__c )) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Warranty Start Date</fullName>
+        <actions>
+            <name>Update_StartDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>IF(ISNEW(), NOT(ISBLANK( Warranty_Start_Date__c )), AND(NOT(ISBLANK(Warranty_Start_Date__c )) ,ISCHANGED(Warranty_Start_Date__c )) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateCategoryCold</fullName>
+        <actions>
+            <name>UpdateCategoryCol</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.status__c</field>
+            <operation>equals</operation>
+            <value>Cold,Lost,Not interested</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateCategoryComplaint</fullName>
+        <actions>
+            <name>UpdateCategoryC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.status__c</field>
+            <operation>equals</operation>
+            <value>Pre-Sale Complaint,Dispute at dealership</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateCategoryDNC</fullName>
+        <actions>
+            <name>UpdateCategory</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.status__c</field>
+            <operation>equals</operation>
+            <value>Do Not Call,Invalid Number</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateCategoryHot</fullName>
+        <actions>
+            <name>UpdateCategoryHot1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.status__c</field>
+            <operation>equals</operation>
+            <value>Hot,Visiting,Finalised,Walk-in,Test Drive,Call Back,Number Busy,Language Issue</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateCategoryWarm</fullName>
+        <actions>
+            <name>UpdateCategoryWarm1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.status__c</field>
+            <operation>equals</operation>
+            <value>Warm,Search,No response,Interested in New Car,Interested in CV,Switched Off Not Reachable</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Followup_Task</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Fin_Follow_up_Date_Time__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Followup Task</subject>
+    </tasks>
+</Workflow>

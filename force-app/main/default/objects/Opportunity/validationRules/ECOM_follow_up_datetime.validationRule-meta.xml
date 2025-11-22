@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ECOM_follow_up_datetime</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISCHANGED(status__c) &amp;&amp;
+ OR(ISPICKVAL(status__c, &apos;Test Drive&apos;),ISPICKVAL(status__c, &apos;Test Drive Rescheduled&apos;))&amp;&amp;
+ISBLANK( DATETIMEVALUE( Followup_Date_Time__c )) &amp;&amp;
+RecordType.Name = &apos;Buyer Used Car&apos;</errorConditionFormula>
+    <errorDisplayField>Followup_Date_Time__c</errorDisplayField>
+    <errorMessage>Follow Up Date Time is required when status is Test Drive/Test Drive Rescheduled</errorMessage>
+</ValidationRule>

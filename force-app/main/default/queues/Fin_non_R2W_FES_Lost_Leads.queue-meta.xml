@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Fin_non_R2W_FES_Lost_Leads</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>FIN_FES_OB</publicGroup>
+        </publicGroups>
+        <users>
+            <user>mfcadmin@quadrafort.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

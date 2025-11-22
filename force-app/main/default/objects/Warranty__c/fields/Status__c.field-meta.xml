@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Not-Interested</fullName>
+                <default>false</default>
+                <label>Not-Interested</label>
+            </value>
+            <value>
+                <fullName>Payment pending</fullName>
+                <default>false</default>
+                <label>Payment pending</label>
+            </value>
+            <value>
+                <fullName>Call back</fullName>
+                <default>false</default>
+                <label>Call back</label>
+            </value>
+            <value>
+                <fullName>No response</fullName>
+                <default>false</default>
+                <label>No response</label>
+            </value>
+            <value>
+                <fullName>Payment successful</fullName>
+                <default>false</default>
+                <label>Payment successful</label>
+            </value>
+            <value>
+                <fullName>Not-Interested after link sent</fullName>
+                <default>false</default>
+                <label>Not-Interested after link sent</label>
+            </value>
+            <value>
+                <fullName>No response after link sent</fullName>
+                <default>false</default>
+                <label>No response after link sent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

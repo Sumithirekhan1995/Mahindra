@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AutomatedProcess</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AutomatedProcess</shortDescription>
+        <value>0052v00000gRo5lAAC</value>
+    </labels>
+    <labels>
+        <fullName>Automated_Process</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Automated Process</shortDescription>
+        <value>0052v00000gRo5lAAC</value>
+    </labels>
+    <labels>
+        <fullName>BUC_RecordType_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BUC RecordType ID</shortDescription>
+        <value>0052v00000gRo5lAAC</value>
+    </labels>
+    <labels>
+        <fullName>Callout_Block_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Callout Block User</shortDescription>
+        <value>0055g00000HMzXnAAL</value>
+    </labels>
+    <labels>
+        <fullName>CnB_Site_Host</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CnB_Site_Host</shortDescription>
+        <value>0050T000002iu2TQAQ</value>
+    </labels>
+    <labels>
+        <fullName>EMPTY_FILE</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CSV file is empty.</shortDescription>
+        <value>CSV file is empty.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_JSON_BAD_FORMAT</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The provided Json String was badly formatted.</shortDescription>
+        <value>The provided Json String was badly formatted.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_JSON_EMPTY</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No field values were found in the Json String.</shortDescription>
+        <value>No field values were found in the Json String.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_OP_FAILED</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Operation failed, please check messages!</shortDescription>
+        <value>Operation failed, please check messages!</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_REQUEST_FAILED_NO_ERROR</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request failed with no specified error.</shortDescription>
+        <value>Request failed with no specified error.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_UNAUTHORIZED_ENDPOINT</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unauthorized endpoint, please check Setup</shortDescription>
+        <value>Unauthorized endpoint, please check Setup</value>
+    </labels>
+    <labels>
+        <fullName>Exotel_Site_user</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Exotel Site user</shortDescription>
+        <value>0050T000002iu2UQAQ</value>
+    </labels>
+    <labels>
+        <fullName>FILE_MISSING</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please provide a comma separated file.</shortDescription>
+        <value>Please provide a comma separated file.</value>
+    </labels>
+    <labels>
+        <fullName>INVALID_FILE_ROW_SIZE_DOESNT_MATCH</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The number of field values does not match the number of header fields on line</shortDescription>
+        <value>The number of field values does not match the number of header fields on line</value>
+    </labels>
+    <labels>
+        <fullName>Integration_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Integration User</shortDescription>
+        <value>0052v00000hOMtTAAW</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_CloseConfirmation_ChatStateBody_04I1s0000004CGJ_9020927</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_CloseConfirmation_ChatStateBody_04I1s0000004CGJ_9020927</shortDescription>
+        <value>Leaving so soon? Hope you found what you were looking for! You can save a copy of this chat from the ‘Save Chat’ button at the end of the chat</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_CloseConfirmation_ChatStateBody_04I1s0000004CGd_5023259</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_CloseConfirmation_ChatStateBody_04I1s0000004CGd_5023259</shortDescription>
+        <value>Leaving so soon? Hope you found what you were looking for! You can save a copy of this chat from the ‘Save Chat’ button at the end of the chat</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_Ended_ChatEndChatbot_04I1s0000004CGJ_2877795</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_Ended_ChatEndChatbot_04I1s0000004CGJ_2877795</shortDescription>
+        <value>Conversation ended by Digital Assistant</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_Ended_ChatEndChatbot_04I1s0000004CGd_5339199</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_Ended_ChatEndChatbot_04I1s0000004CGd_5339199</shortDescription>
+        <value>Conversation ended by Digital Assistant</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_ExtendedHeader_SaveTranscript_04I1s0000004CGJ_9093221</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_ExtendedHeader_SaveTranscript_04I1s0000004CGJ_9093221</shortDescription>
+        <value>Save a copy of the chat</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_ExtendedHeader_SaveTranscript_04I1s0000004CGd_1792734</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_ExtendedHeader_SaveTranscript_04I1s0000004CGd_1792734</shortDescription>
+        <value>Save a copy of the chat</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_CloseConfirmation_WaitingStateBodyApology_04I1s0000004CGd_7982146</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_CloseConfirmation_WaitingStateBodyApology_04I1s0000004CGd_7982146</shortDescription>
+        <value>Thank You! Unfortunately, there are no agents available at the moment.</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_Error_ErrorNoAgentHeader_04I1s0000004CGJ_6882689</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_Error_ErrorNoAgentHeader_04I1s0000004CGJ_6882689</shortDescription>
+        <value>Thank you for showing interest in us, unfortunately there are no agents available at the moment. Our team will get in touch with you during business hours on the next working day</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_Error_ErrorNoAgentHeader_04I1s0000004CGd_8812784</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_Error_ErrorNoAgentHeader_04I1s0000004CGd_8812784</shortDescription>
+        <value>Thank you for showing interest in us, unfortunately there are no agents available at the moment. Our team will get in touch with you during business hours on the next working day</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_WithQueuePos_WaitingQueuePosMaxMessageSecondL_04I1s0000004CGJ_5572463</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_WithQueuePos_WaitingQueuePosMaxMessageSecondL_04I1s0000004CGJ_5572463</shortDescription>
+        <value>Your digital assistant is on the way.</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_WithQueuePos_WaitingQueuePosMaxMessageSecondL_04I1s0000004CGd_5342695</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_WithQueuePos_WaitingQueuePosMaxMessageSecondL_04I1s0000004CGd_5342695</shortDescription>
+        <value>Your digital assistant is on the way.</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_WithoutQueuePos_WaitingMessage_04I1s0000004CGJ_3132323</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_WithoutQueuePos_WaitingMessage_04I1s0000004CGJ_3132323</shortDescription>
+        <value>Your digital assistant is on the way.</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_WithoutQueuePos_WaitingMessage_04I1s0000004CGd_1746918</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_WithoutQueuePos_WaitingMessage_04I1s0000004CGd_1746918</shortDescription>
+        <value>Your digital assistant is on the way.</value>
+    </labels>
+    <labels>
+        <fullName>MFCW_Site_Host</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MFCW_Site_Host</shortDescription>
+        <value>0050T000002iu2VQAQ</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CHECK_API_NAMES</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please check the Api names!</shortDescription>
+        <value>Please check the Api names!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CS_MDT_EXISTS</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Make sure Custom Setting and Custom Metadata Types exists in the org!</shortDescription>
+        <value>Make sure Custom Setting and Custom Metadata Types exists in the org!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CS_MDT_FIELD_NAME_FORMAT</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please check the format, Custom Setting.field and Custom Metadata Types.field</shortDescription>
+        <value>Please check the format, Custom Setting.field and Custom Metadata Types.field</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CS_MDT_FIELD_NAME_REQ</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Setting Name/Field Name and CMT/Field Name names are required!</shortDescription>
+        <value>Custom Setting Name/Field Name and CMT/Field Name names are required!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CS_MDT_MAPPING_REQ</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Setting Name, Custom Metadata Types and Json Mapping names are required!</shortDescription>
+        <value>Custom Setting Name, Custom Metadata Types and Json Mapping names are required!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CS_MDT_REQ</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Setting Api Name and Custom Metadata Types Api names are required!</shortDescription>
+        <value>Custom Setting Api Name and Custom Metadata Types Api names are required!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CUSTOM_SETTINGS_EXISTS</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Make sure Custom Setting exists in the org!</shortDescription>
+        <value>Make sure Custom Setting exists in the org!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_JSON_API_NAMES</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please check the Api names in Json!</shortDescription>
+        <value>Please check the Api names in Json!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_JSON_FORMAT</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please check the Json format!</shortDescription>
+        <value>Please check the Json format!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_MDT_END</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Metadata Types name should end with</shortDescription>
+        <value>Custom Metadata Types name should end with</value>
+    </labels>
+    <labels>
+        <fullName>MSG_MIGRATION_COMPLETED</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Migration Completed!</shortDescription>
+        <value>Migration Completed!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_MIGRATION_IN_PROGRESS</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Migration In Progress, check status under Deploy -&gt; Deployment Status, Job Id:</shortDescription>
+        <value>Migration In Progress, check status under Deploy -&gt; Deployment Status, Job Id:</value>
+    </labels>
+    <labels>
+        <fullName>MSG_NOT_SUPPORTED</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Not Supported!!!</shortDescription>
+        <value>Not Supported!!!</value>
+    </labels>
+    <labels>
+        <fullName>Platform_Integration_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Platform_Integration_User</shortDescription>
+        <value>0052v00000gRo5nAAC</value>
+    </labels>
+    <labels>
+        <fullName>Seller_Record_Type_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Seller Record Type Id</shortDescription>
+        <value>0052v00000gRo5lAAC</value>
+    </labels>
+    <labels>
+        <fullName>TYPE_OPTION_NOT_SELECTED</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please choose a valid custom metadata type.</shortDescription>
+        <value>Please choose a valid custom metadata type.</value>
+    </labels>
+</CustomLabels>

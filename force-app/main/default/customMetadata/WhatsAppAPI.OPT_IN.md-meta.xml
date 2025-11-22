@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OPT IN</label>
+    <protected>false</protected>
+    <values>
+        <field>API_Link__c</field>
+        <value xsi:type="xsd:string">https://media.smsgupshup.com/GatewayAPI/rest</value>
+    </values>
+    <values>
+        <field>Auth_Scheme__c</field>
+        <value xsi:type="xsd:string">plain</value>
+    </values>
+    <values>
+        <field>Channel__c</field>
+        <value xsi:type="xsd:string">WHATSAPP</value>
+    </values>
+    <values>
+        <field>Format__c</field>
+        <value xsi:type="xsd:string">json</value>
+    </values>
+    <values>
+        <field>Method__c</field>
+        <value xsi:type="xsd:string">OPT_IN</value>
+    </values>
+    <values>
+        <field>Msg_Type__c</field>
+        <value xsi:type="xsd:string">Text</value>
+    </values>
+    <values>
+        <field>Password__c</field>
+        <value xsi:type="xsd:string">a@mwWZQ*</value>
+    </values>
+    <values>
+        <field>UserId__c</field>
+        <value xsi:type="xsd:string">2000215571</value>
+    </values>
+    <values>
+        <field>Version__c</field>
+        <value xsi:type="xsd:string">1.1</value>
+    </values>
+</CustomMetadata>

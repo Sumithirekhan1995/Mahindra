@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restricted_Lead_Source</fullName>
+    <active>true</active>
+    <description>Restrict lead source picklist for BUC, SE, HI, and autofin.</description>
+    <errorConditionFormula>AND(If(
+RecordTypeName__c = &apos;Buyer Used Car&apos; || RecordTypeName__c = &apos;Seller&apos;, true,false),
+NOT(ISPICKVAL( LeadSource,&apos;Advertisement&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;AutoNexa&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;CNB&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;CNB Facebook&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;Discovery&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;EXOTEL&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;Hoarding&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;MFC&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;MFC Facebook&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;MFC-Chat&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;MFC-CRM&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;MM&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;News&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;OLX&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;Other&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;Reference&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;SFDC&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;Social&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;Walk-In&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;Walk In&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;Website&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;affiliate&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;LMSMMFSL&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;R2WMMFSL&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;Partner&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;Call Centre&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;BTL Activity&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;HI&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;CPT&apos;)),
+NOT(ISPICKVAL( LeadSource,&apos;Inbound&apos;))
+)</errorConditionFormula>
+    <errorMessage>Please select the appropriate Lead Source.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,27 @@
+.THIS .Text-title{
+    font-size:16px;
+}
+
+.THIS .Text-body {
+    font-size:12px;
+}
+
+@media screen and (max-width: 600px) {
+.THIS .Text-title{
+    font-size:14px;
+}
+
+.THIS .Text-body {
+    font-size:10px;
+}
+}
+
+@media screen and (max-width: 400px) {
+.THIS .Text-title{
+    font-size:12px;
+}
+
+.THIS .Text-body {
+    font-size:8px;
+}
+}

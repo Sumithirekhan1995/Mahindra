@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>ElisonLeadActivityService</members>
+		<members>LeadConstants</members>
+		<members>LeadTriggerHandler</members>
+		<members>LeadTriggerTestClass</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Lead.Status__c</members>
+		<members>Opportunity.status__c</members>
+		<name>CustomField</name>
+	</types>
+	<version>64.0</version>
+</Package>

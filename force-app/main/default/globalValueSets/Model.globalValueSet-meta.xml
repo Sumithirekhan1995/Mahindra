@@ -1,0 +1,2355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>STILE</fullName>
+        <default>false</default>
+        <label>STILE</label>
+    </customValue>
+    <customValue>
+        <fullName>DB 11</fullName>
+        <default>false</default>
+        <label>DB 11</label>
+    </customValue>
+    <customValue>
+        <fullName>DB9</fullName>
+        <default>false</default>
+        <label>DB9</label>
+    </customValue>
+    <customValue>
+        <fullName>DBS</fullName>
+        <default>false</default>
+        <label>DBS</label>
+    </customValue>
+    <customValue>
+        <fullName>RAPIDE</fullName>
+        <default>false</default>
+        <label>RAPIDE</label>
+    </customValue>
+    <customValue>
+        <fullName>V12</fullName>
+        <default>false</default>
+        <label>V12</label>
+    </customValue>
+    <customValue>
+        <fullName>V12 VANTAGE</fullName>
+        <default>false</default>
+        <label>V12 VANTAGE</label>
+    </customValue>
+    <customValue>
+        <fullName>V8 VANTAGE</fullName>
+        <default>false</default>
+        <label>V8 VANTAGE</label>
+    </customValue>
+    <customValue>
+        <fullName>VANQUISH</fullName>
+        <default>false</default>
+        <label>VANQUISH</label>
+    </customValue>
+    <customValue>
+        <fullName>A3</fullName>
+        <default>false</default>
+        <label>A3</label>
+    </customValue>
+    <customValue>
+        <fullName>A3 CABRIOLET</fullName>
+        <default>false</default>
+        <label>A3 CABRIOLET</label>
+    </customValue>
+    <customValue>
+        <fullName>A4</fullName>
+        <default>false</default>
+        <label>A4</label>
+    </customValue>
+    <customValue>
+        <fullName>A5</fullName>
+        <default>false</default>
+        <label>A5</label>
+    </customValue>
+    <customValue>
+        <fullName>A5 CABRIOLET</fullName>
+        <default>false</default>
+        <label>A5 CABRIOLET</label>
+    </customValue>
+    <customValue>
+        <fullName>A6</fullName>
+        <default>false</default>
+        <label>A6</label>
+    </customValue>
+    <customValue>
+        <fullName>A7</fullName>
+        <default>false</default>
+        <label>A7</label>
+    </customValue>
+    <customValue>
+        <fullName>A8 L</fullName>
+        <default>false</default>
+        <label>A8 L</label>
+    </customValue>
+    <customValue>
+        <fullName>Q3</fullName>
+        <default>false</default>
+        <label>Q3</label>
+    </customValue>
+    <customValue>
+        <fullName>Q5</fullName>
+        <default>false</default>
+        <label>Q5</label>
+    </customValue>
+    <customValue>
+        <fullName>Q7</fullName>
+        <default>false</default>
+        <label>Q7</label>
+    </customValue>
+    <customValue>
+        <fullName>Q8</fullName>
+        <default>false</default>
+        <label>Q8</label>
+    </customValue>
+    <customValue>
+        <fullName>R8</fullName>
+        <default>false</default>
+        <label>R8</label>
+    </customValue>
+    <customValue>
+        <fullName>RS 5</fullName>
+        <default>false</default>
+        <label>RS 5</label>
+    </customValue>
+    <customValue>
+        <fullName>RS 6</fullName>
+        <default>false</default>
+        <label>RS 6</label>
+    </customValue>
+    <customValue>
+        <fullName>RS7 SPORTBACK</fullName>
+        <default>false</default>
+        <label>RS7 SPORTBACK</label>
+    </customValue>
+    <customValue>
+        <fullName>S4</fullName>
+        <default>false</default>
+        <label>S4</label>
+    </customValue>
+    <customValue>
+        <fullName>S5 SPORTBACK</fullName>
+        <default>false</default>
+        <label>S5 SPORTBACK</label>
+    </customValue>
+    <customValue>
+        <fullName>S6</fullName>
+        <default>false</default>
+        <label>S6</label>
+    </customValue>
+    <customValue>
+        <fullName>S8</fullName>
+        <default>false</default>
+        <label>S8</label>
+    </customValue>
+    <customValue>
+        <fullName>TT</fullName>
+        <default>false</default>
+        <label>TT</label>
+    </customValue>
+    <customValue>
+        <fullName>QUTE</fullName>
+        <default>false</default>
+        <label>QUTE</label>
+    </customValue>
+    <customValue>
+        <fullName>ARNAGE</fullName>
+        <default>false</default>
+        <label>ARNAGE</label>
+    </customValue>
+    <customValue>
+        <fullName>AZURE</fullName>
+        <default>false</default>
+        <label>AZURE</label>
+    </customValue>
+    <customValue>
+        <fullName>BENTAYGA</fullName>
+        <default>false</default>
+        <label>BENTAYGA</label>
+    </customValue>
+    <customValue>
+        <fullName>CONTINENTAL</fullName>
+        <default>false</default>
+        <label>CONTINENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>CONTINENTAL FLYING SPUR</fullName>
+        <default>false</default>
+        <label>CONTINENTAL FLYING SPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>CONTINENTAL GT</fullName>
+        <default>false</default>
+        <label>CONTINENTAL GT</label>
+    </customValue>
+    <customValue>
+        <fullName>CONTINENTAL GTC</fullName>
+        <default>false</default>
+        <label>CONTINENTAL GTC</label>
+    </customValue>
+    <customValue>
+        <fullName>MULSANNE</fullName>
+        <default>false</default>
+        <label>MULSANNE</label>
+    </customValue>
+    <customValue>
+        <fullName>1 SERIES</fullName>
+        <default>false</default>
+        <label>1 SERIES</label>
+    </customValue>
+    <customValue>
+        <fullName>3 SERIES</fullName>
+        <default>false</default>
+        <label>3 SERIES</label>
+    </customValue>
+    <customValue>
+        <fullName>3 SERIES GT</fullName>
+        <default>false</default>
+        <label>3 SERIES GT</label>
+    </customValue>
+    <customValue>
+        <fullName>5 SERIES</fullName>
+        <default>false</default>
+        <label>5 SERIES</label>
+    </customValue>
+    <customValue>
+        <fullName>5 SERIES GT</fullName>
+        <default>false</default>
+        <label>5 SERIES GT</label>
+    </customValue>
+    <customValue>
+        <fullName>6 SERIES</fullName>
+        <default>false</default>
+        <label>6 SERIES</label>
+    </customValue>
+    <customValue>
+        <fullName>6 SERIES GRAN COUPE</fullName>
+        <default>false</default>
+        <label>6 SERIES GRAN COUPE</label>
+    </customValue>
+    <customValue>
+        <fullName>6 SERIES GT</fullName>
+        <default>false</default>
+        <label>6 SERIES GT</label>
+    </customValue>
+    <customValue>
+        <fullName>7 SERIES</fullName>
+        <default>false</default>
+        <label>7 SERIES</label>
+    </customValue>
+    <customValue>
+        <fullName>I8</fullName>
+        <default>false</default>
+        <label>I8</label>
+    </customValue>
+    <customValue>
+        <fullName>M2</fullName>
+        <default>false</default>
+        <label>M2</label>
+    </customValue>
+    <customValue>
+        <fullName>M3</fullName>
+        <default>false</default>
+        <label>M3</label>
+    </customValue>
+    <customValue>
+        <fullName>M4</fullName>
+        <default>false</default>
+        <label>M4</label>
+    </customValue>
+    <customValue>
+        <fullName>M5</fullName>
+        <default>false</default>
+        <label>M5</label>
+    </customValue>
+    <customValue>
+        <fullName>M6</fullName>
+        <default>false</default>
+        <label>M6</label>
+    </customValue>
+    <customValue>
+        <fullName>X1</fullName>
+        <default>false</default>
+        <label>X1</label>
+    </customValue>
+    <customValue>
+        <fullName>X3</fullName>
+        <default>false</default>
+        <label>X3</label>
+    </customValue>
+    <customValue>
+        <fullName>X4</fullName>
+        <default>false</default>
+        <label>X4</label>
+    </customValue>
+    <customValue>
+        <fullName>X5</fullName>
+        <default>false</default>
+        <label>X5</label>
+    </customValue>
+    <customValue>
+        <fullName>X6</fullName>
+        <default>false</default>
+        <label>X6</label>
+    </customValue>
+    <customValue>
+        <fullName>X7</fullName>
+        <default>false</default>
+        <label>X7</label>
+    </customValue>
+    <customValue>
+        <fullName>Z3</fullName>
+        <default>false</default>
+        <label>Z3</label>
+    </customValue>
+    <customValue>
+        <fullName>Z4</fullName>
+        <default>false</default>
+        <label>Z4</label>
+    </customValue>
+    <customValue>
+        <fullName>VEYRON</fullName>
+        <default>false</default>
+        <label>VEYRON</label>
+    </customValue>
+    <customValue>
+        <fullName>AVEO</fullName>
+        <default>false</default>
+        <label>AVEO</label>
+    </customValue>
+    <customValue>
+        <fullName>AVEO U-VA</fullName>
+        <default>false</default>
+        <label>AVEO U-VA</label>
+    </customValue>
+    <customValue>
+        <fullName>BEAT</fullName>
+        <default>false</default>
+        <label>BEAT</label>
+    </customValue>
+    <customValue>
+        <fullName>CAPTIVA</fullName>
+        <default>false</default>
+        <label>CAPTIVA</label>
+    </customValue>
+    <customValue>
+        <fullName>CRUZE</fullName>
+        <default>false</default>
+        <label>CRUZE</label>
+    </customValue>
+    <customValue>
+        <fullName>ENJOY</fullName>
+        <default>false</default>
+        <label>ENJOY</label>
+    </customValue>
+    <customValue>
+        <fullName>FORESTER</fullName>
+        <default>false</default>
+        <label>FORESTER</label>
+    </customValue>
+    <customValue>
+        <fullName>OPTRA</fullName>
+        <default>false</default>
+        <label>OPTRA</label>
+    </customValue>
+    <customValue>
+        <fullName>OPTRA MAGNUM</fullName>
+        <default>false</default>
+        <label>OPTRA MAGNUM</label>
+    </customValue>
+    <customValue>
+        <fullName>OPTRA SRV</fullName>
+        <default>false</default>
+        <label>OPTRA SRV</label>
+    </customValue>
+    <customValue>
+        <fullName>SAIL</fullName>
+        <default>false</default>
+        <label>SAIL</label>
+    </customValue>
+    <customValue>
+        <fullName>SAIL HATCHBACK</fullName>
+        <default>false</default>
+        <label>SAIL HATCHBACK</label>
+    </customValue>
+    <customValue>
+        <fullName>SAIL U-VA</fullName>
+        <default>false</default>
+        <label>SAIL U-VA</label>
+    </customValue>
+    <customValue>
+        <fullName>SPARK</fullName>
+        <default>false</default>
+        <label>SPARK</label>
+    </customValue>
+    <customValue>
+        <fullName>TAVERA</fullName>
+        <default>false</default>
+        <label>TAVERA</label>
+    </customValue>
+    <customValue>
+        <fullName>TRAILBLAZER</fullName>
+        <default>false</default>
+        <label>TRAILBLAZER</label>
+    </customValue>
+    <customValue>
+        <fullName>CIELO</fullName>
+        <default>false</default>
+        <label>CIELO</label>
+    </customValue>
+    <customValue>
+        <fullName>MATIZ</fullName>
+        <default>false</default>
+        <label>MATIZ</label>
+    </customValue>
+    <customValue>
+        <fullName>GO</fullName>
+        <default>false</default>
+        <label>GO</label>
+    </customValue>
+    <customValue>
+        <fullName>GO PLUS</fullName>
+        <default>false</default>
+        <label>GO PLUS</label>
+    </customValue>
+    <customValue>
+        <fullName>REDI-GO</fullName>
+        <default>false</default>
+        <label>REDI-GO</label>
+    </customValue>
+    <customValue>
+        <fullName>AVANTI</fullName>
+        <default>false</default>
+        <label>AVANTI</label>
+    </customValue>
+    <customValue>
+        <fullName>MULTIX</fullName>
+        <default>false</default>
+        <label>MULTIX</label>
+    </customValue>
+    <customValue>
+        <fullName>458</fullName>
+        <default>false</default>
+        <label>458</label>
+    </customValue>
+    <customValue>
+        <fullName>488</fullName>
+        <default>false</default>
+        <label>488</label>
+    </customValue>
+    <customValue>
+        <fullName>612</fullName>
+        <default>false</default>
+        <label>612</label>
+    </customValue>
+    <customValue>
+        <fullName>812</fullName>
+        <default>false</default>
+        <label>812</label>
+    </customValue>
+    <customValue>
+        <fullName>599 GTB</fullName>
+        <default>false</default>
+        <label>599 GTB</label>
+    </customValue>
+    <customValue>
+        <fullName>CALIFORNIA</fullName>
+        <default>false</default>
+        <label>CALIFORNIA</label>
+    </customValue>
+    <customValue>
+        <fullName>F12 BERLINETTA</fullName>
+        <default>false</default>
+        <label>F12 BERLINETTA</label>
+    </customValue>
+    <customValue>
+        <fullName>F430</fullName>
+        <default>false</default>
+        <label>F430</label>
+    </customValue>
+    <customValue>
+        <fullName>FF</fullName>
+        <default>false</default>
+        <label>FF</label>
+    </customValue>
+    <customValue>
+        <fullName>GTC4 LUSSO</fullName>
+        <default>false</default>
+        <label>GTC4 LUSSO</label>
+    </customValue>
+    <customValue>
+        <fullName>PORTOFINO</fullName>
+        <default>false</default>
+        <label>PORTOFINO</label>
+    </customValue>
+    <customValue>
+        <fullName>500</fullName>
+        <default>false</default>
+        <label>500</label>
+    </customValue>
+    <customValue>
+        <fullName>1100</fullName>
+        <default>false</default>
+        <label>1100</label>
+    </customValue>
+    <customValue>
+        <fullName>ABARTH 595</fullName>
+        <default>false</default>
+        <label>ABARTH 595</label>
+    </customValue>
+    <customValue>
+        <fullName>ABARTH PUNTO</fullName>
+        <default>false</default>
+        <label>ABARTH PUNTO</label>
+    </customValue>
+    <customValue>
+        <fullName>ADVENTURE</fullName>
+        <default>false</default>
+        <label>ADVENTURE</label>
+    </customValue>
+    <customValue>
+        <fullName>AVVENTURA</fullName>
+        <default>false</default>
+        <label>AVVENTURA</label>
+    </customValue>
+    <customValue>
+        <fullName>LINEA</fullName>
+        <default>false</default>
+        <label>LINEA</label>
+    </customValue>
+    <customValue>
+        <fullName>LINEA CLASSIC</fullName>
+        <default>false</default>
+        <label>LINEA CLASSIC</label>
+    </customValue>
+    <customValue>
+        <fullName>PALIO</fullName>
+        <default>false</default>
+        <label>PALIO</label>
+    </customValue>
+    <customValue>
+        <fullName>PALIO D</fullName>
+        <default>false</default>
+        <label>PALIO D</label>
+    </customValue>
+    <customValue>
+        <fullName>PALIO NV</fullName>
+        <default>false</default>
+        <label>PALIO NV</label>
+    </customValue>
+    <customValue>
+        <fullName>PALIO STILE</fullName>
+        <default>false</default>
+        <label>PALIO STILE</label>
+    </customValue>
+    <customValue>
+        <fullName>PETRA</fullName>
+        <default>false</default>
+        <label>PETRA</label>
+    </customValue>
+    <customValue>
+        <fullName>PETRA D</fullName>
+        <default>false</default>
+        <label>PETRA D</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNTO</fullName>
+        <default>false</default>
+        <label>PUNTO</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNTO EVO</fullName>
+        <default>false</default>
+        <label>PUNTO EVO</label>
+    </customValue>
+    <customValue>
+        <fullName>SIENA</fullName>
+        <default>false</default>
+        <label>SIENA</label>
+    </customValue>
+    <customValue>
+        <fullName>SIENA WEEKEND</fullName>
+        <default>false</default>
+        <label>SIENA WEEKEND</label>
+    </customValue>
+    <customValue>
+        <fullName>UNO</fullName>
+        <default>false</default>
+        <label>UNO</label>
+    </customValue>
+    <customValue>
+        <fullName>URBAN CROSS</fullName>
+        <default>false</default>
+        <label>URBAN CROSS</label>
+    </customValue>
+    <customValue>
+        <fullName>FORCE ONE</fullName>
+        <default>false</default>
+        <label>FORCE ONE</label>
+    </customValue>
+    <customValue>
+        <fullName>GURKHA</fullName>
+        <default>false</default>
+        <label>GURKHA</label>
+    </customValue>
+    <customValue>
+        <fullName>TRAX CHALLENGER</fullName>
+        <default>false</default>
+        <label>TRAX CHALLENGER</label>
+    </customValue>
+    <customValue>
+        <fullName>TRAX CRUISER</fullName>
+        <default>false</default>
+        <label>TRAX CRUISER</label>
+    </customValue>
+    <customValue>
+        <fullName>TRAX CRUISER DELUXE</fullName>
+        <default>false</default>
+        <label>TRAX CRUISER DELUXE</label>
+    </customValue>
+    <customValue>
+        <fullName>TRAX GAMA</fullName>
+        <default>false</default>
+        <label>TRAX GAMA</label>
+    </customValue>
+    <customValue>
+        <fullName>TRAX TOOFAN</fullName>
+        <default>false</default>
+        <label>TRAX TOOFAN</label>
+    </customValue>
+    <customValue>
+        <fullName>TRAX TOOFAN DELUXE</fullName>
+        <default>false</default>
+        <label>TRAX TOOFAN DELUXE</label>
+    </customValue>
+    <customValue>
+        <fullName>ASPIRE</fullName>
+        <default>false</default>
+        <label>ASPIRE</label>
+    </customValue>
+    <customValue>
+        <fullName>CLASSIC</fullName>
+        <default>false</default>
+        <label>CLASSIC</label>
+    </customValue>
+    <customValue>
+        <fullName>ECOSPORT</fullName>
+        <default>false</default>
+        <label>ECOSPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>ENDEAVOUR</fullName>
+        <default>false</default>
+        <label>ENDEAVOUR</label>
+    </customValue>
+    <customValue>
+        <fullName>ESCORT</fullName>
+        <default>false</default>
+        <label>ESCORT</label>
+    </customValue>
+    <customValue>
+        <fullName>FIESTA</fullName>
+        <default>false</default>
+        <label>FIESTA</label>
+    </customValue>
+    <customValue>
+        <fullName>FIESTA CLASSIC</fullName>
+        <default>false</default>
+        <label>FIESTA CLASSIC</label>
+    </customValue>
+    <customValue>
+        <fullName>FIGO</fullName>
+        <default>false</default>
+        <label>FIGO</label>
+    </customValue>
+    <customValue>
+        <fullName>FREESTYLE</fullName>
+        <default>false</default>
+        <label>FREESTYLE</label>
+    </customValue>
+    <customValue>
+        <fullName>FUSION</fullName>
+        <default>false</default>
+        <label>FUSION</label>
+    </customValue>
+    <customValue>
+        <fullName>IKON</fullName>
+        <default>false</default>
+        <label>IKON</label>
+    </customValue>
+    <customValue>
+        <fullName>MONDEO</fullName>
+        <default>false</default>
+        <label>MONDEO</label>
+    </customValue>
+    <customValue>
+        <fullName>MUSTANG</fullName>
+        <default>false</default>
+        <label>MUSTANG</label>
+    </customValue>
+    <customValue>
+        <fullName>AMBASSADOR</fullName>
+        <default>false</default>
+        <label>AMBASSADOR</label>
+    </customValue>
+    <customValue>
+        <fullName>CONTESSA</fullName>
+        <default>false</default>
+        <label>CONTESSA</label>
+    </customValue>
+    <customValue>
+        <fullName>ACCORD</fullName>
+        <default>false</default>
+        <label>ACCORD</label>
+    </customValue>
+    <customValue>
+        <fullName>AMAZE</fullName>
+        <default>false</default>
+        <label>AMAZE</label>
+    </customValue>
+    <customValue>
+        <fullName>BRIO</fullName>
+        <default>false</default>
+        <label>BRIO</label>
+    </customValue>
+    <customValue>
+        <fullName>BR-V</fullName>
+        <default>false</default>
+        <label>BR-V</label>
+    </customValue>
+    <customValue>
+        <fullName>CITY</fullName>
+        <default>false</default>
+        <label>CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>CITY ZX</fullName>
+        <default>false</default>
+        <label>CITY ZX</label>
+    </customValue>
+    <customValue>
+        <fullName>CIVIC</fullName>
+        <default>false</default>
+        <label>CIVIC</label>
+    </customValue>
+    <customValue>
+        <fullName>CR-V</fullName>
+        <default>false</default>
+        <label>CR-V</label>
+    </customValue>
+    <customValue>
+        <fullName>JAZZ</fullName>
+        <default>false</default>
+        <label>JAZZ</label>
+    </customValue>
+    <customValue>
+        <fullName>MOBILIO</fullName>
+        <default>false</default>
+        <label>MOBILIO</label>
+    </customValue>
+    <customValue>
+        <fullName>WR-V</fullName>
+        <default>false</default>
+        <label>WR-V</label>
+    </customValue>
+    <customValue>
+        <fullName>ACCENT</fullName>
+        <default>false</default>
+        <label>ACCENT</label>
+    </customValue>
+    <customValue>
+        <fullName>ACCENT VIVA</fullName>
+        <default>false</default>
+        <label>ACCENT VIVA</label>
+    </customValue>
+    <customValue>
+        <fullName>AURA</fullName>
+        <default>false</default>
+        <label>AURA</label>
+    </customValue>
+    <customValue>
+        <fullName>CRETA</fullName>
+        <default>false</default>
+        <label>CRETA</label>
+    </customValue>
+    <customValue>
+        <fullName>ELANTRA</fullName>
+        <default>false</default>
+        <label>ELANTRA</label>
+    </customValue>
+    <customValue>
+        <fullName>ELITE I20</fullName>
+        <default>false</default>
+        <label>ELITE I20</label>
+    </customValue>
+    <customValue>
+        <fullName>EON</fullName>
+        <default>false</default>
+        <label>EON</label>
+    </customValue>
+    <customValue>
+        <fullName>FLUIDIC VERNA 4S</fullName>
+        <default>false</default>
+        <label>FLUIDIC VERNA 4S</label>
+    </customValue>
+    <customValue>
+        <fullName>GETZ</fullName>
+        <default>false</default>
+        <label>GETZ</label>
+    </customValue>
+    <customValue>
+        <fullName>GETZ PRIME</fullName>
+        <default>false</default>
+        <label>GETZ PRIME</label>
+    </customValue>
+    <customValue>
+        <fullName>GRAND I10</fullName>
+        <default>false</default>
+        <label>GRAND I10</label>
+    </customValue>
+    <customValue>
+        <fullName>GRAND I10 NIOS</fullName>
+        <default>false</default>
+        <label>GRAND I10 NIOS</label>
+    </customValue>
+    <customValue>
+        <fullName>GRAND I10 PRIME</fullName>
+        <default>false</default>
+        <label>GRAND I10 PRIME</label>
+    </customValue>
+    <customValue>
+        <fullName>I10</fullName>
+        <default>false</default>
+        <label>I10</label>
+    </customValue>
+    <customValue>
+        <fullName>I20</fullName>
+        <default>false</default>
+        <label>I20</label>
+    </customValue>
+    <customValue>
+        <fullName>I20 ACTIVE</fullName>
+        <default>false</default>
+        <label>I20 ACTIVE</label>
+    </customValue>
+    <customValue>
+        <fullName>KONA ELECTRIC</fullName>
+        <default>false</default>
+        <label>KONA ELECTRIC</label>
+    </customValue>
+    <customValue>
+        <fullName>SANTA FE</fullName>
+        <default>false</default>
+        <label>SANTA FE</label>
+    </customValue>
+    <customValue>
+        <fullName>SANTRO</fullName>
+        <default>false</default>
+        <label>SANTRO</label>
+    </customValue>
+    <customValue>
+        <fullName>SANTRO XING</fullName>
+        <default>false</default>
+        <label>SANTRO XING</label>
+    </customValue>
+    <customValue>
+        <fullName>SONATA</fullName>
+        <default>false</default>
+        <label>SONATA</label>
+    </customValue>
+    <customValue>
+        <fullName>SONATA EMBERA</fullName>
+        <default>false</default>
+        <label>SONATA EMBERA</label>
+    </customValue>
+    <customValue>
+        <fullName>SONATA TRANSFORM</fullName>
+        <default>false</default>
+        <label>SONATA TRANSFORM</label>
+    </customValue>
+    <customValue>
+        <fullName>TERRACAN</fullName>
+        <default>false</default>
+        <label>TERRACAN</label>
+    </customValue>
+    <customValue>
+        <fullName>TUCSON</fullName>
+        <default>false</default>
+        <label>TUCSON</label>
+    </customValue>
+    <customValue>
+        <fullName>VENUE</fullName>
+        <default>false</default>
+        <label>VENUE</label>
+    </customValue>
+    <customValue>
+        <fullName>VERNA</fullName>
+        <default>false</default>
+        <label>VERNA</label>
+    </customValue>
+    <customValue>
+        <fullName>VERNA TRANSFORM</fullName>
+        <default>false</default>
+        <label>VERNA TRANSFORM</label>
+    </customValue>
+    <customValue>
+        <fullName>XCENT</fullName>
+        <default>false</default>
+        <label>XCENT</label>
+    </customValue>
+    <customValue>
+        <fullName>XCENT PRIME</fullName>
+        <default>false</default>
+        <label>XCENT PRIME</label>
+    </customValue>
+    <customValue>
+        <fullName>EXTREME</fullName>
+        <default>false</default>
+        <label>EXTREME</label>
+    </customValue>
+    <customValue>
+        <fullName>RHINO RX</fullName>
+        <default>false</default>
+        <label>RHINO RX</label>
+    </customValue>
+    <customValue>
+        <fullName>D-MAX V-CROSS</fullName>
+        <default>false</default>
+        <label>D-MAX V-CROSS</label>
+    </customValue>
+    <customValue>
+        <fullName>MU 7</fullName>
+        <default>false</default>
+        <label>MU 7</label>
+    </customValue>
+    <customValue>
+        <fullName>MU-X</fullName>
+        <default>false</default>
+        <label>MU-X</label>
+    </customValue>
+    <customValue>
+        <fullName>F TYPE</fullName>
+        <default>false</default>
+        <label>F TYPE</label>
+    </customValue>
+    <customValue>
+        <fullName>F-PACE</fullName>
+        <default>false</default>
+        <label>F-PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>XE</fullName>
+        <default>false</default>
+        <label>XE</label>
+    </customValue>
+    <customValue>
+        <fullName>XF</fullName>
+        <default>false</default>
+        <label>XF</label>
+    </customValue>
+    <customValue>
+        <fullName>XJ</fullName>
+        <default>false</default>
+        <label>XJ</label>
+    </customValue>
+    <customValue>
+        <fullName>XJ L</fullName>
+        <default>false</default>
+        <label>XJ L</label>
+    </customValue>
+    <customValue>
+        <fullName>XK</fullName>
+        <default>false</default>
+        <label>XK</label>
+    </customValue>
+    <customValue>
+        <fullName>COMPASS</fullName>
+        <default>false</default>
+        <label>COMPASS</label>
+    </customValue>
+    <customValue>
+        <fullName>GRAND CHEROKEE</fullName>
+        <default>false</default>
+        <label>GRAND CHEROKEE</label>
+    </customValue>
+    <customValue>
+        <fullName>WRANGLER</fullName>
+        <default>false</default>
+        <label>WRANGLER</label>
+    </customValue>
+    <customValue>
+        <fullName>CARNIVAL</fullName>
+        <default>false</default>
+        <label>CARNIVAL</label>
+    </customValue>
+    <customValue>
+        <fullName>SELTOS</fullName>
+        <default>false</default>
+        <label>SELTOS</label>
+    </customValue>
+    <customValue>
+        <fullName>AGERA</fullName>
+        <default>false</default>
+        <label>AGERA</label>
+    </customValue>
+    <customValue>
+        <fullName>AVENTADOR</fullName>
+        <default>false</default>
+        <label>AVENTADOR</label>
+    </customValue>
+    <customValue>
+        <fullName>GALLARDO</fullName>
+        <default>false</default>
+        <label>GALLARDO</label>
+    </customValue>
+    <customValue>
+        <fullName>HURACAN</fullName>
+        <default>false</default>
+        <label>HURACAN</label>
+    </customValue>
+    <customValue>
+        <fullName>MURCIELAGO</fullName>
+        <default>false</default>
+        <label>MURCIELAGO</label>
+    </customValue>
+    <customValue>
+        <fullName>URUS</fullName>
+        <default>false</default>
+        <label>URUS</label>
+    </customValue>
+    <customValue>
+        <fullName>DEFENDER</fullName>
+        <default>false</default>
+        <label>DEFENDER</label>
+    </customValue>
+    <customValue>
+        <fullName>DISCOVERY</fullName>
+        <default>false</default>
+        <label>DISCOVERY</label>
+    </customValue>
+    <customValue>
+        <fullName>DISCOVERY 4</fullName>
+        <default>false</default>
+        <label>DISCOVERY 4</label>
+    </customValue>
+    <customValue>
+        <fullName>DISCOVERY SPORT</fullName>
+        <default>false</default>
+        <label>DISCOVERY SPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>FREELANDER 2</fullName>
+        <default>false</default>
+        <label>FREELANDER 2</label>
+    </customValue>
+    <customValue>
+        <fullName>RANGE ROVER</fullName>
+        <default>false</default>
+        <label>RANGE ROVER</label>
+    </customValue>
+    <customValue>
+        <fullName>RANGE ROVER EVOQUE</fullName>
+        <default>false</default>
+        <label>RANGE ROVER EVOQUE</label>
+    </customValue>
+    <customValue>
+        <fullName>RANGE ROVER SPORT</fullName>
+        <default>false</default>
+        <label>RANGE ROVER SPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>RANGE ROVER VELAR</fullName>
+        <default>false</default>
+        <label>RANGE ROVER VELAR</label>
+    </customValue>
+    <customValue>
+        <fullName>ES</fullName>
+        <default>false</default>
+        <label>ES</label>
+    </customValue>
+    <customValue>
+        <fullName>LC</fullName>
+        <default>false</default>
+        <label>LC</label>
+    </customValue>
+    <customValue>
+        <fullName>LS</fullName>
+        <default>false</default>
+        <label>LS</label>
+    </customValue>
+    <customValue>
+        <fullName>LX</fullName>
+        <default>false</default>
+        <label>LX</label>
+    </customValue>
+    <customValue>
+        <fullName>NX</fullName>
+        <default>false</default>
+        <label>NX</label>
+    </customValue>
+    <customValue>
+        <fullName>RX</fullName>
+        <default>false</default>
+        <label>RX</label>
+    </customValue>
+    <customValue>
+        <fullName>SC 430</fullName>
+        <default>false</default>
+        <label>SC 430</label>
+    </customValue>
+    <customValue>
+        <fullName>ALTURAS G4</fullName>
+        <default>false</default>
+        <label>ALTURAS G4</label>
+    </customValue>
+    <customValue>
+        <fullName>ARMADA</fullName>
+        <default>false</default>
+        <label>ARMADA</label>
+    </customValue>
+    <customValue>
+        <fullName>BOLERO</fullName>
+        <default>false</default>
+        <label>BOLERO</label>
+    </customValue>
+    <customValue>
+        <fullName>E2O</fullName>
+        <default>false</default>
+        <label>E2O</label>
+    </customValue>
+    <customValue>
+        <fullName>E2O PLUS</fullName>
+        <default>false</default>
+        <label>E2O PLUS</label>
+    </customValue>
+    <customValue>
+        <fullName>EVERITO</fullName>
+        <default>false</default>
+        <label>EVERITO</label>
+    </customValue>
+    <customValue>
+        <fullName>JEEP</fullName>
+        <default>false</default>
+        <label>JEEP</label>
+    </customValue>
+    <customValue>
+        <fullName>KUV100</fullName>
+        <default>false</default>
+        <label>KUV100</label>
+    </customValue>
+    <customValue>
+        <fullName>KUV100 NXT</fullName>
+        <default>false</default>
+        <label>KUV100 NXT</label>
+    </customValue>
+    <customValue>
+        <fullName>MARAZZO</fullName>
+        <default>false</default>
+        <label>MARAZZO</label>
+    </customValue>
+    <customValue>
+        <fullName>MARSHAL</fullName>
+        <default>false</default>
+        <label>MARSHAL</label>
+    </customValue>
+    <customValue>
+        <fullName>MAXX</fullName>
+        <default>false</default>
+        <label>MAXX</label>
+    </customValue>
+    <customValue>
+        <fullName>NUVOSPORT</fullName>
+        <default>false</default>
+        <label>NUVOSPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>QUANTO</fullName>
+        <default>false</default>
+        <label>QUANTO</label>
+    </customValue>
+    <customValue>
+        <fullName>REVA-I</fullName>
+        <default>false</default>
+        <label>REVA-I</label>
+    </customValue>
+    <customValue>
+        <fullName>SCORPIO</fullName>
+        <default>false</default>
+        <label>SCORPIO</label>
+    </customValue>
+    <customValue>
+        <fullName>SCORPIO GETAWAY</fullName>
+        <default>false</default>
+        <label>SCORPIO GETAWAY</label>
+    </customValue>
+    <customValue>
+        <fullName>THAR</fullName>
+        <default>false</default>
+        <label>THAR</label>
+    </customValue>
+    <customValue>
+        <fullName>TUV300</fullName>
+        <default>false</default>
+        <label>TUV300</label>
+    </customValue>
+    <customValue>
+        <fullName>TUV300 PLUS</fullName>
+        <default>false</default>
+        <label>TUV300 PLUS</label>
+    </customValue>
+    <customValue>
+        <fullName>VERITO</fullName>
+        <default>false</default>
+        <label>VERITO</label>
+    </customValue>
+    <customValue>
+        <fullName>VERITO VIBE CS</fullName>
+        <default>false</default>
+        <label>VERITO VIBE CS</label>
+    </customValue>
+    <customValue>
+        <fullName>XUV300</fullName>
+        <default>false</default>
+        <label>XUV300</label>
+    </customValue>
+    <customValue>
+        <fullName>XUV500</fullName>
+        <default>false</default>
+        <label>XUV500</label>
+    </customValue>
+    <customValue>
+        <fullName>XYLO</fullName>
+        <default>false</default>
+        <label>XYLO</label>
+    </customValue>
+    <customValue>
+        <fullName>LOGAN</fullName>
+        <default>false</default>
+        <label>LOGAN</label>
+    </customValue>
+    <customValue>
+        <fullName>LOGAN EDGE</fullName>
+        <default>false</default>
+        <label>LOGAN EDGE</label>
+    </customValue>
+    <customValue>
+        <fullName>800</fullName>
+        <default>false</default>
+        <label>800</label>
+    </customValue>
+    <customValue>
+        <fullName>1000</fullName>
+        <default>false</default>
+        <label>1000</label>
+    </customValue>
+    <customValue>
+        <fullName>ALTO</fullName>
+        <default>false</default>
+        <label>ALTO</label>
+    </customValue>
+    <customValue>
+        <fullName>ALTO 800</fullName>
+        <default>false</default>
+        <label>ALTO 800</label>
+    </customValue>
+    <customValue>
+        <fullName>ALTO K10</fullName>
+        <default>false</default>
+        <label>ALTO K10</label>
+    </customValue>
+    <customValue>
+        <fullName>A-STAR</fullName>
+        <default>false</default>
+        <label>A-STAR</label>
+    </customValue>
+    <customValue>
+        <fullName>BALENO</fullName>
+        <default>false</default>
+        <label>BALENO</label>
+    </customValue>
+    <customValue>
+        <fullName>CELERIO</fullName>
+        <default>false</default>
+        <label>CELERIO</label>
+    </customValue>
+    <customValue>
+        <fullName>CELERIO X</fullName>
+        <default>false</default>
+        <label>CELERIO X</label>
+    </customValue>
+    <customValue>
+        <fullName>CIAZ</fullName>
+        <default>false</default>
+        <label>CIAZ</label>
+    </customValue>
+    <customValue>
+        <fullName>DZIRE</fullName>
+        <default>false</default>
+        <label>DZIRE</label>
+    </customValue>
+    <customValue>
+        <fullName>EECO</fullName>
+        <default>false</default>
+        <label>EECO</label>
+    </customValue>
+    <customValue>
+        <fullName>ERTIGA</fullName>
+        <default>false</default>
+        <label>ERTIGA</label>
+    </customValue>
+    <customValue>
+        <fullName>ESTEEM</fullName>
+        <default>false</default>
+        <label>ESTEEM</label>
+    </customValue>
+    <customValue>
+        <fullName>GRAND VITARA</fullName>
+        <default>false</default>
+        <label>GRAND VITARA</label>
+    </customValue>
+    <customValue>
+        <fullName>GYPSY</fullName>
+        <default>false</default>
+        <label>GYPSY</label>
+    </customValue>
+    <customValue>
+        <fullName>IGNIS</fullName>
+        <default>false</default>
+        <label>IGNIS</label>
+    </customValue>
+    <customValue>
+        <fullName>KIZASHI</fullName>
+        <default>false</default>
+        <label>KIZASHI</label>
+    </customValue>
+    <customValue>
+        <fullName>OMNI</fullName>
+        <default>false</default>
+        <label>OMNI</label>
+    </customValue>
+    <customValue>
+        <fullName>RITZ</fullName>
+        <default>false</default>
+        <label>RITZ</label>
+    </customValue>
+    <customValue>
+        <fullName>S-CROSS</fullName>
+        <default>false</default>
+        <label>S-CROSS</label>
+    </customValue>
+    <customValue>
+        <fullName>S-PRESSO</fullName>
+        <default>false</default>
+        <label>S-PRESSO</label>
+    </customValue>
+    <customValue>
+        <fullName>STINGRAY</fullName>
+        <default>false</default>
+        <label>STINGRAY</label>
+    </customValue>
+    <customValue>
+        <fullName>SWIFT</fullName>
+        <default>false</default>
+        <label>SWIFT</label>
+    </customValue>
+    <customValue>
+        <fullName>SWIFT DZIRE</fullName>
+        <default>false</default>
+        <label>SWIFT DZIRE</label>
+    </customValue>
+    <customValue>
+        <fullName>SX4</fullName>
+        <default>false</default>
+        <label>SX4</label>
+    </customValue>
+    <customValue>
+        <fullName>VERSA</fullName>
+        <default>false</default>
+        <label>VERSA</label>
+    </customValue>
+    <customValue>
+        <fullName>VITARA BREZZA</fullName>
+        <default>false</default>
+        <label>VITARA BREZZA</label>
+    </customValue>
+    <customValue>
+        <fullName>WAGON R</fullName>
+        <default>false</default>
+        <label>WAGON R</label>
+    </customValue>
+    <customValue>
+        <fullName>WAGON R 1.0</fullName>
+        <default>false</default>
+        <label>WAGON R 1.0</label>
+    </customValue>
+    <customValue>
+        <fullName>XL6</fullName>
+        <default>false</default>
+        <label>XL6</label>
+    </customValue>
+    <customValue>
+        <fullName>ZEN</fullName>
+        <default>false</default>
+        <label>ZEN</label>
+    </customValue>
+    <customValue>
+        <fullName>ZEN ESTILO</fullName>
+        <default>false</default>
+        <label>ZEN ESTILO</label>
+    </customValue>
+    <customValue>
+        <fullName>GHIBLI</fullName>
+        <default>false</default>
+        <label>GHIBLI</label>
+    </customValue>
+    <customValue>
+        <fullName>GRANCABRIO</fullName>
+        <default>false</default>
+        <label>GRANCABRIO</label>
+    </customValue>
+    <customValue>
+        <fullName>GRANTURISMO</fullName>
+        <default>false</default>
+        <label>GRANTURISMO</label>
+    </customValue>
+    <customValue>
+        <fullName>LEVANTE</fullName>
+        <default>false</default>
+        <label>LEVANTE</label>
+    </customValue>
+    <customValue>
+        <fullName>QUATTROPORTE</fullName>
+        <default>false</default>
+        <label>QUATTROPORTE</label>
+    </customValue>
+    <customValue>
+        <fullName>A CLASS</fullName>
+        <default>false</default>
+        <label>A CLASS</label>
+    </customValue>
+    <customValue>
+        <fullName>AMG GT</fullName>
+        <default>false</default>
+        <label>AMG GT</label>
+    </customValue>
+    <customValue>
+        <fullName>AMG GT COUPE</fullName>
+        <default>false</default>
+        <label>AMG GT COUPE</label>
+    </customValue>
+    <customValue>
+        <fullName>B CLASS</fullName>
+        <default>false</default>
+        <label>B CLASS</label>
+    </customValue>
+    <customValue>
+        <fullName>C-CLASS</fullName>
+        <default>false</default>
+        <label>C-CLASS</label>
+    </customValue>
+    <customValue>
+        <fullName>C-CLASS CABRIOLET</fullName>
+        <default>false</default>
+        <label>C-CLASS CABRIOLET</label>
+    </customValue>
+    <customValue>
+        <fullName>CL</fullName>
+        <default>false</default>
+        <label>CL</label>
+    </customValue>
+    <customValue>
+        <fullName>CLA</fullName>
+        <default>false</default>
+        <label>CLA</label>
+    </customValue>
+    <customValue>
+        <fullName>CLK</fullName>
+        <default>false</default>
+        <label>CLK</label>
+    </customValue>
+    <customValue>
+        <fullName>CLS</fullName>
+        <default>false</default>
+        <label>CLS</label>
+    </customValue>
+    <customValue>
+        <fullName>E-CLASS</fullName>
+        <default>false</default>
+        <label>E-CLASS</label>
+    </customValue>
+    <customValue>
+        <fullName>E-CLASS ALL TERRAIN</fullName>
+        <default>false</default>
+        <label>E-CLASS ALL TERRAIN</label>
+    </customValue>
+    <customValue>
+        <fullName>E-CLASS CABRIOLET</fullName>
+        <default>false</default>
+        <label>E-CLASS CABRIOLET</label>
+    </customValue>
+    <customValue>
+        <fullName>G CLASS</fullName>
+        <default>false</default>
+        <label>G CLASS</label>
+    </customValue>
+    <customValue>
+        <fullName>GL</fullName>
+        <default>false</default>
+        <label>GL</label>
+    </customValue>
+    <customValue>
+        <fullName>GLA</fullName>
+        <default>false</default>
+        <label>GLA</label>
+    </customValue>
+    <customValue>
+        <fullName>GLC</fullName>
+        <default>false</default>
+        <label>GLC</label>
+    </customValue>
+    <customValue>
+        <fullName>GLC COUPE</fullName>
+        <default>false</default>
+        <label>GLC COUPE</label>
+    </customValue>
+    <customValue>
+        <fullName>GLE CLASS</fullName>
+        <default>false</default>
+        <label>GLE CLASS</label>
+    </customValue>
+    <customValue>
+        <fullName>GLE COUPE</fullName>
+        <default>false</default>
+        <label>GLE COUPE</label>
+    </customValue>
+    <customValue>
+        <fullName>GLS CLASS</fullName>
+        <default>false</default>
+        <label>GLS CLASS</label>
+    </customValue>
+    <customValue>
+        <fullName>MAYBACH 57 S</fullName>
+        <default>false</default>
+        <label>MAYBACH 57 S</label>
+    </customValue>
+    <customValue>
+        <fullName>MAYBACH 62</fullName>
+        <default>false</default>
+        <label>MAYBACH 62</label>
+    </customValue>
+    <customValue>
+        <fullName>M-CLASS</fullName>
+        <default>false</default>
+        <label>M-CLASS</label>
+    </customValue>
+    <customValue>
+        <fullName>R CLASS</fullName>
+        <default>false</default>
+        <label>R CLASS</label>
+    </customValue>
+    <customValue>
+        <fullName>S-CLASS</fullName>
+        <default>false</default>
+        <label>S-CLASS</label>
+    </customValue>
+    <customValue>
+        <fullName>S-CLASS CABRIOLET</fullName>
+        <default>false</default>
+        <label>S-CLASS CABRIOLET</label>
+    </customValue>
+    <customValue>
+        <fullName>S-COUPE</fullName>
+        <default>false</default>
+        <label>S-COUPE</label>
+    </customValue>
+    <customValue>
+        <fullName>SL</fullName>
+        <default>false</default>
+        <label>SL</label>
+    </customValue>
+    <customValue>
+        <fullName>SLC</fullName>
+        <default>false</default>
+        <label>SLC</label>
+    </customValue>
+    <customValue>
+        <fullName>SLK</fullName>
+        <default>false</default>
+        <label>SLK</label>
+    </customValue>
+    <customValue>
+        <fullName>SLS</fullName>
+        <default>false</default>
+        <label>SLS</label>
+    </customValue>
+    <customValue>
+        <fullName>V-CLASS</fullName>
+        <default>false</default>
+        <label>V-CLASS</label>
+    </customValue>
+    <customValue>
+        <fullName>VIANO</fullName>
+        <default>false</default>
+        <label>VIANO</label>
+    </customValue>
+    <customValue>
+        <fullName>HECTOR</fullName>
+        <default>false</default>
+        <label>HECTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>ZS EV</fullName>
+        <default>false</default>
+        <label>ZS EV</label>
+    </customValue>
+    <customValue>
+        <fullName>CLUBMAN</fullName>
+        <default>false</default>
+        <label>CLUBMAN</label>
+    </customValue>
+    <customValue>
+        <fullName>COOPER</fullName>
+        <default>false</default>
+        <label>COOPER</label>
+    </customValue>
+    <customValue>
+        <fullName>COOPER CONVERTIBLE</fullName>
+        <default>false</default>
+        <label>COOPER CONVERTIBLE</label>
+    </customValue>
+    <customValue>
+        <fullName>COOPER S</fullName>
+        <default>false</default>
+        <label>COOPER S</label>
+    </customValue>
+    <customValue>
+        <fullName>COUNTRYMAN</fullName>
+        <default>false</default>
+        <label>COUNTRYMAN</label>
+    </customValue>
+    <customValue>
+        <fullName>CEDIA</fullName>
+        <default>false</default>
+        <label>CEDIA</label>
+    </customValue>
+    <customValue>
+        <fullName>LANCER</fullName>
+        <default>false</default>
+        <label>LANCER</label>
+    </customValue>
+    <customValue>
+        <fullName>LANCER EVOLUTION</fullName>
+        <default>false</default>
+        <label>LANCER EVOLUTION</label>
+    </customValue>
+    <customValue>
+        <fullName>MONTERO</fullName>
+        <default>false</default>
+        <label>MONTERO</label>
+    </customValue>
+    <customValue>
+        <fullName>OUTLANDER</fullName>
+        <default>false</default>
+        <label>OUTLANDER</label>
+    </customValue>
+    <customValue>
+        <fullName>PAJERO</fullName>
+        <default>false</default>
+        <label>PAJERO</label>
+    </customValue>
+    <customValue>
+        <fullName>PAJERO SPORT</fullName>
+        <default>false</default>
+        <label>PAJERO SPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>370Z</fullName>
+        <default>false</default>
+        <label>370Z</label>
+    </customValue>
+    <customValue>
+        <fullName>EVALIA</fullName>
+        <default>false</default>
+        <label>EVALIA</label>
+    </customValue>
+    <customValue>
+        <fullName>GT-R SPORT</fullName>
+        <default>false</default>
+        <label>GT-R SPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>KICKS</fullName>
+        <default>false</default>
+        <label>KICKS</label>
+    </customValue>
+    <customValue>
+        <fullName>MICRA</fullName>
+        <default>false</default>
+        <label>MICRA</label>
+    </customValue>
+    <customValue>
+        <fullName>MICRA ACTIVE</fullName>
+        <default>false</default>
+        <label>MICRA ACTIVE</label>
+    </customValue>
+    <customValue>
+        <fullName>SUNNY</fullName>
+        <default>false</default>
+        <label>SUNNY</label>
+    </customValue>
+    <customValue>
+        <fullName>TEANA</fullName>
+        <default>false</default>
+        <label>TEANA</label>
+    </customValue>
+    <customValue>
+        <fullName>TERRANO</fullName>
+        <default>false</default>
+        <label>TERRANO</label>
+    </customValue>
+    <customValue>
+        <fullName>X-TRAIL</fullName>
+        <default>false</default>
+        <label>X-TRAIL</label>
+    </customValue>
+    <customValue>
+        <fullName>ASTRA</fullName>
+        <default>false</default>
+        <label>ASTRA</label>
+    </customValue>
+    <customValue>
+        <fullName>CORSA</fullName>
+        <default>false</default>
+        <label>CORSA</label>
+    </customValue>
+    <customValue>
+        <fullName>VECTRA</fullName>
+        <default>false</default>
+        <label>VECTRA</label>
+    </customValue>
+    <customValue>
+        <fullName>718</fullName>
+        <default>false</default>
+        <label>718</label>
+    </customValue>
+    <customValue>
+        <fullName>911</fullName>
+        <default>false</default>
+        <label>911</label>
+    </customValue>
+    <customValue>
+        <fullName>BOXSTER</fullName>
+        <default>false</default>
+        <label>BOXSTER</label>
+    </customValue>
+    <customValue>
+        <fullName>CAYENNE</fullName>
+        <default>false</default>
+        <label>CAYENNE</label>
+    </customValue>
+    <customValue>
+        <fullName>CAYENNE COUPE</fullName>
+        <default>false</default>
+        <label>CAYENNE COUPE</label>
+    </customValue>
+    <customValue>
+        <fullName>CAYMAN</fullName>
+        <default>false</default>
+        <label>CAYMAN</label>
+    </customValue>
+    <customValue>
+        <fullName>MACAN</fullName>
+        <default>false</default>
+        <label>MACAN</label>
+    </customValue>
+    <customValue>
+        <fullName>PANAMERA</fullName>
+        <default>false</default>
+        <label>PANAMERA</label>
+    </customValue>
+    <customValue>
+        <fullName>118 NE</fullName>
+        <default>false</default>
+        <label>118 NE</label>
+    </customValue>
+    <customValue>
+        <fullName>RIO</fullName>
+        <default>false</default>
+        <label>RIO</label>
+    </customValue>
+    <customValue>
+        <fullName>CAPTUR</fullName>
+        <default>false</default>
+        <label>CAPTUR</label>
+    </customValue>
+    <customValue>
+        <fullName>DUSTER</fullName>
+        <default>false</default>
+        <label>DUSTER</label>
+    </customValue>
+    <customValue>
+        <fullName>FLUENCE</fullName>
+        <default>false</default>
+        <label>FLUENCE</label>
+    </customValue>
+    <customValue>
+        <fullName>KOLEOS</fullName>
+        <default>false</default>
+        <label>KOLEOS</label>
+    </customValue>
+    <customValue>
+        <fullName>KWID</fullName>
+        <default>false</default>
+        <label>KWID</label>
+    </customValue>
+    <customValue>
+        <fullName>LODGY</fullName>
+        <default>false</default>
+        <label>LODGY</label>
+    </customValue>
+    <customValue>
+        <fullName>PULSE</fullName>
+        <default>false</default>
+        <label>PULSE</label>
+    </customValue>
+    <customValue>
+        <fullName>SCALA</fullName>
+        <default>false</default>
+        <label>SCALA</label>
+    </customValue>
+    <customValue>
+        <fullName>TRIBER</fullName>
+        <default>false</default>
+        <label>TRIBER</label>
+    </customValue>
+    <customValue>
+        <fullName>CULLINAN</fullName>
+        <default>false</default>
+        <label>CULLINAN</label>
+    </customValue>
+    <customValue>
+        <fullName>DAWN</fullName>
+        <default>false</default>
+        <label>DAWN</label>
+    </customValue>
+    <customValue>
+        <fullName>DROPHEAD COUPE</fullName>
+        <default>false</default>
+        <label>DROPHEAD COUPE</label>
+    </customValue>
+    <customValue>
+        <fullName>GHOST</fullName>
+        <default>false</default>
+        <label>GHOST</label>
+    </customValue>
+    <customValue>
+        <fullName>GHOST SERIES II</fullName>
+        <default>false</default>
+        <label>GHOST SERIES II</label>
+    </customValue>
+    <customValue>
+        <fullName>PHANTOM</fullName>
+        <default>false</default>
+        <label>PHANTOM</label>
+    </customValue>
+    <customValue>
+        <fullName>PHANTOM COUPE</fullName>
+        <default>false</default>
+        <label>PHANTOM COUPE</label>
+    </customValue>
+    <customValue>
+        <fullName>PHANTOM VIII</fullName>
+        <default>false</default>
+        <label>PHANTOM VIII</label>
+    </customValue>
+    <customValue>
+        <fullName>WRAITH</fullName>
+        <default>false</default>
+        <label>WRAITH</label>
+    </customValue>
+    <customValue>
+        <fullName>STORM</fullName>
+        <default>false</default>
+        <label>STORM</label>
+    </customValue>
+    <customValue>
+        <fullName>FABIA</fullName>
+        <default>false</default>
+        <label>FABIA</label>
+    </customValue>
+    <customValue>
+        <fullName>FABIA SCOUT</fullName>
+        <default>false</default>
+        <label>FABIA SCOUT</label>
+    </customValue>
+    <customValue>
+        <fullName>KODIAQ</fullName>
+        <default>false</default>
+        <label>KODIAQ</label>
+    </customValue>
+    <customValue>
+        <fullName>LAURA</fullName>
+        <default>false</default>
+        <label>LAURA</label>
+    </customValue>
+    <customValue>
+        <fullName>OCTAVIA</fullName>
+        <default>false</default>
+        <label>OCTAVIA</label>
+    </customValue>
+    <customValue>
+        <fullName>OCTAVIA COMBI</fullName>
+        <default>false</default>
+        <label>OCTAVIA COMBI</label>
+    </customValue>
+    <customValue>
+        <fullName>RAPID</fullName>
+        <default>false</default>
+        <label>RAPID</label>
+    </customValue>
+    <customValue>
+        <fullName>SUPERB</fullName>
+        <default>false</default>
+        <label>SUPERB</label>
+    </customValue>
+    <customValue>
+        <fullName>YETI</fullName>
+        <default>false</default>
+        <label>YETI</label>
+    </customValue>
+    <customValue>
+        <fullName>REXTON</fullName>
+        <default>false</default>
+        <label>REXTON</label>
+    </customValue>
+    <customValue>
+        <fullName>ALTROZ</fullName>
+        <default>false</default>
+        <label>ALTROZ</label>
+    </customValue>
+    <customValue>
+        <fullName>ARIA</fullName>
+        <default>false</default>
+        <label>ARIA</label>
+    </customValue>
+    <customValue>
+        <fullName>BOLT</fullName>
+        <default>false</default>
+        <label>BOLT</label>
+    </customValue>
+    <customValue>
+        <fullName>ESTATE</fullName>
+        <default>false</default>
+        <label>ESTATE</label>
+    </customValue>
+    <customValue>
+        <fullName>HARRIER</fullName>
+        <default>false</default>
+        <label>HARRIER</label>
+    </customValue>
+    <customValue>
+        <fullName>HEXA</fullName>
+        <default>false</default>
+        <label>HEXA</label>
+    </customValue>
+    <customValue>
+        <fullName>INDICA</fullName>
+        <default>false</default>
+        <label>INDICA</label>
+    </customValue>
+    <customValue>
+        <fullName>INDICA EV2</fullName>
+        <default>false</default>
+        <label>INDICA EV2</label>
+    </customValue>
+    <customValue>
+        <fullName>INDICA V2</fullName>
+        <default>false</default>
+        <label>INDICA V2</label>
+    </customValue>
+    <customValue>
+        <fullName>INDICA VISTA</fullName>
+        <default>false</default>
+        <label>INDICA VISTA</label>
+    </customValue>
+    <customValue>
+        <fullName>INDICAB</fullName>
+        <default>false</default>
+        <label>INDICAB</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIGO</fullName>
+        <default>false</default>
+        <label>INDIGO</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIGO CS</fullName>
+        <default>false</default>
+        <label>INDIGO CS</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIGO ECS</fullName>
+        <default>false</default>
+        <label>INDIGO ECS</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIGO MARINA</fullName>
+        <default>false</default>
+        <label>INDIGO MARINA</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIGO XL</fullName>
+        <default>false</default>
+        <label>INDIGO XL</label>
+    </customValue>
+    <customValue>
+        <fullName>MAGIC</fullName>
+        <default>false</default>
+        <label>MAGIC</label>
+    </customValue>
+    <customValue>
+        <fullName>MANZA</fullName>
+        <default>false</default>
+        <label>MANZA</label>
+    </customValue>
+    <customValue>
+        <fullName>MOVUS</fullName>
+        <default>false</default>
+        <label>MOVUS</label>
+    </customValue>
+    <customValue>
+        <fullName>NANO</fullName>
+        <default>false</default>
+        <label>NANO</label>
+    </customValue>
+    <customValue>
+        <fullName>NANO GENX</fullName>
+        <default>false</default>
+        <label>NANO GENX</label>
+    </customValue>
+    <customValue>
+        <fullName>NEXON</fullName>
+        <default>false</default>
+        <label>NEXON</label>
+    </customValue>
+    <customValue>
+        <fullName>NEXON EV</fullName>
+        <default>false</default>
+        <label>NEXON EV</label>
+    </customValue>
+    <customValue>
+        <fullName>SAFARI</fullName>
+        <default>false</default>
+        <label>SAFARI</label>
+    </customValue>
+    <customValue>
+        <fullName>SAFARI STORME</fullName>
+        <default>false</default>
+        <label>SAFARI STORME</label>
+    </customValue>
+    <customValue>
+        <fullName>SIERRA</fullName>
+        <default>false</default>
+        <label>SIERRA</label>
+    </customValue>
+    <customValue>
+        <fullName>SUMO</fullName>
+        <default>false</default>
+        <label>SUMO</label>
+    </customValue>
+    <customValue>
+        <fullName>SUMO GOLD</fullName>
+        <default>false</default>
+        <label>SUMO GOLD</label>
+    </customValue>
+    <customValue>
+        <fullName>SUMO GRANDE</fullName>
+        <default>false</default>
+        <label>SUMO GRANDE</label>
+    </customValue>
+    <customValue>
+        <fullName>SUMO GRANDE MK II</fullName>
+        <default>false</default>
+        <label>SUMO GRANDE MK II</label>
+    </customValue>
+    <customValue>
+        <fullName>SUMO SE PLUS</fullName>
+        <default>false</default>
+        <label>SUMO SE PLUS</label>
+    </customValue>
+    <customValue>
+        <fullName>SUMO SPACIO</fullName>
+        <default>false</default>
+        <label>SUMO SPACIO</label>
+    </customValue>
+    <customValue>
+        <fullName>SUMO VICTA</fullName>
+        <default>false</default>
+        <label>SUMO VICTA</label>
+    </customValue>
+    <customValue>
+        <fullName>TIAGO</fullName>
+        <default>false</default>
+        <label>TIAGO</label>
+    </customValue>
+    <customValue>
+        <fullName>TIAGO JTP</fullName>
+        <default>false</default>
+        <label>TIAGO JTP</label>
+    </customValue>
+    <customValue>
+        <fullName>TIAGO NRG</fullName>
+        <default>false</default>
+        <label>TIAGO NRG</label>
+    </customValue>
+    <customValue>
+        <fullName>TIGOR</fullName>
+        <default>false</default>
+        <label>TIGOR</label>
+    </customValue>
+    <customValue>
+        <fullName>TIGOR EV</fullName>
+        <default>false</default>
+        <label>TIGOR EV</label>
+    </customValue>
+    <customValue>
+        <fullName>TIGOR JTP</fullName>
+        <default>false</default>
+        <label>TIGOR JTP</label>
+    </customValue>
+    <customValue>
+        <fullName>VENTURE</fullName>
+        <default>false</default>
+        <label>VENTURE</label>
+    </customValue>
+    <customValue>
+        <fullName>VISTA</fullName>
+        <default>false</default>
+        <label>VISTA</label>
+    </customValue>
+    <customValue>
+        <fullName>VISTA TECH</fullName>
+        <default>false</default>
+        <label>VISTA TECH</label>
+    </customValue>
+    <customValue>
+        <fullName>WINGER</fullName>
+        <default>false</default>
+        <label>WINGER</label>
+    </customValue>
+    <customValue>
+        <fullName>XENON XT</fullName>
+        <default>false</default>
+        <label>XENON XT</label>
+    </customValue>
+    <customValue>
+        <fullName>ZEST</fullName>
+        <default>false</default>
+        <label>ZEST</label>
+    </customValue>
+    <customValue>
+        <fullName>CAMRY</fullName>
+        <default>false</default>
+        <label>CAMRY</label>
+    </customValue>
+    <customValue>
+        <fullName>COROLLA</fullName>
+        <default>false</default>
+        <label>COROLLA</label>
+    </customValue>
+    <customValue>
+        <fullName>COROLLA ALTIS</fullName>
+        <default>false</default>
+        <label>COROLLA ALTIS</label>
+    </customValue>
+    <customValue>
+        <fullName>ETIOS</fullName>
+        <default>false</default>
+        <label>ETIOS</label>
+    </customValue>
+    <customValue>
+        <fullName>ETIOS CROSS</fullName>
+        <default>false</default>
+        <label>ETIOS CROSS</label>
+    </customValue>
+    <customValue>
+        <fullName>ETIOS LIVA</fullName>
+        <default>false</default>
+        <label>ETIOS LIVA</label>
+    </customValue>
+    <customValue>
+        <fullName>FORTUNER</fullName>
+        <default>false</default>
+        <label>FORTUNER</label>
+    </customValue>
+    <customValue>
+        <fullName>GLANZA</fullName>
+        <default>false</default>
+        <label>GLANZA</label>
+    </customValue>
+    <customValue>
+        <fullName>INNOVA</fullName>
+        <default>false</default>
+        <label>INNOVA</label>
+    </customValue>
+    <customValue>
+        <fullName>INNOVA CRYSTA</fullName>
+        <default>false</default>
+        <label>INNOVA CRYSTA</label>
+    </customValue>
+    <customValue>
+        <fullName>LAND CRUISER</fullName>
+        <default>false</default>
+        <label>LAND CRUISER</label>
+    </customValue>
+    <customValue>
+        <fullName>LAND CRUISER PRADO</fullName>
+        <default>false</default>
+        <label>LAND CRUISER PRADO</label>
+    </customValue>
+    <customValue>
+        <fullName>PLATINUM ETIOS</fullName>
+        <default>false</default>
+        <label>PLATINUM ETIOS</label>
+    </customValue>
+    <customValue>
+        <fullName>PRIUS</fullName>
+        <default>false</default>
+        <label>PRIUS</label>
+    </customValue>
+    <customValue>
+        <fullName>QUALIS</fullName>
+        <default>false</default>
+        <label>QUALIS</label>
+    </customValue>
+    <customValue>
+        <fullName>VELLFIRE</fullName>
+        <default>false</default>
+        <label>VELLFIRE</label>
+    </customValue>
+    <customValue>
+        <fullName>YARIS</fullName>
+        <default>false</default>
+        <label>YARIS</label>
+    </customValue>
+    <customValue>
+        <fullName>AMEO</fullName>
+        <default>false</default>
+        <label>AMEO</label>
+    </customValue>
+    <customValue>
+        <fullName>BEETLE</fullName>
+        <default>false</default>
+        <label>BEETLE</label>
+    </customValue>
+    <customValue>
+        <fullName>CROSS POLO</fullName>
+        <default>false</default>
+        <label>CROSS POLO</label>
+    </customValue>
+    <customValue>
+        <fullName>GTI</fullName>
+        <default>false</default>
+        <label>GTI</label>
+    </customValue>
+    <customValue>
+        <fullName>JETTA</fullName>
+        <default>false</default>
+        <label>JETTA</label>
+    </customValue>
+    <customValue>
+        <fullName>PASSAT</fullName>
+        <default>false</default>
+        <label>PASSAT</label>
+    </customValue>
+    <customValue>
+        <fullName>PHAETON</fullName>
+        <default>false</default>
+        <label>PHAETON</label>
+    </customValue>
+    <customValue>
+        <fullName>POLO</fullName>
+        <default>false</default>
+        <label>POLO</label>
+    </customValue>
+    <customValue>
+        <fullName>TIGUAN</fullName>
+        <default>false</default>
+        <label>TIGUAN</label>
+    </customValue>
+    <customValue>
+        <fullName>TIGUAN ALLSPACE</fullName>
+        <default>false</default>
+        <label>TIGUAN ALLSPACE</label>
+    </customValue>
+    <customValue>
+        <fullName>TOUAREG</fullName>
+        <default>false</default>
+        <label>TOUAREG</label>
+    </customValue>
+    <customValue>
+        <fullName>T-ROC</fullName>
+        <default>false</default>
+        <label>T-ROC</label>
+    </customValue>
+    <customValue>
+        <fullName>VENTO</fullName>
+        <default>false</default>
+        <label>VENTO</label>
+    </customValue>
+    <customValue>
+        <fullName>S60</fullName>
+        <default>false</default>
+        <label>S60</label>
+    </customValue>
+    <customValue>
+        <fullName>S80</fullName>
+        <default>false</default>
+        <label>S80</label>
+    </customValue>
+    <customValue>
+        <fullName>S90</fullName>
+        <default>false</default>
+        <label>S90</label>
+    </customValue>
+    <customValue>
+        <fullName>V40</fullName>
+        <default>false</default>
+        <label>V40</label>
+    </customValue>
+    <customValue>
+        <fullName>V40 CROSS COUNTRY</fullName>
+        <default>false</default>
+        <label>V40 CROSS COUNTRY</label>
+    </customValue>
+    <customValue>
+        <fullName>V90 CROSS COUNTRY</fullName>
+        <default>false</default>
+        <label>V90 CROSS COUNTRY</label>
+    </customValue>
+    <customValue>
+        <fullName>XC40</fullName>
+        <default>false</default>
+        <label>XC40</label>
+    </customValue>
+    <customValue>
+        <fullName>XC60</fullName>
+        <default>false</default>
+        <label>XC60</label>
+    </customValue>
+    <customValue>
+        <fullName>XC90</fullName>
+        <default>false</default>
+        <label>XC90</label>
+    </customValue>
+    <customValue>
+        <fullName>XUV700</fullName>
+        <default>false</default>
+        <label>XUV700</label>
+    </customValue>
+    <masterLabel>Model</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

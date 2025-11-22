@@ -1,0 +1,30 @@
+<aura:event type="APPLICATION" description="Event template" >
+    
+    <aura:attribute name="isSearched" type="Boolean"/>
+	<aura:attribute name="spinner" type="Boolean"/>    
+	<aura:attribute name="searchType" type="String"/>    
+    <aura:attribute name="make" type="list" default="[]"/>
+    <aura:attribute name="model" type="list" default="[]"/>
+    <aura:attribute name="variant" type="list" default="[]"/>
+    <aura:attribute name="bodyType" type="list" default="[]"/>
+    <aura:attribute name="fuel" type="list" default="[]"/>
+    <aura:attribute name="color" type="list" default="[]"/>
+    <aura:attribute name="modelYear" type="list" default="[]"/>
+    <aura:attribute name="modelMonth" type="list" default="[]"/>
+    <aura:attribute name="certifed" type="list" default="[]"/>
+    
+    <aura:attribute name="dealerName" type="list" default="[]"/>
+    <aura:attribute name="city" type="list" default="[]"/>
+    <aura:attribute name="pincode" type="list" default="[]"/>
+        
+    <aura:attribute name="minBudgetFilter" type="Integer"/>
+    <aura:attribute name="maxBudgetFilter" type="Integer"/>
+    <aura:attribute name="minKmFilter" type="Integer"/>
+    <aura:attribute name="maxKmFilter" type="Integer"/>
+    <aura:attribute name="selectedMake" type="String"/>
+    <aura:attribute name="selectedModel" type="String"/>
+    
+    <aura:attribute name="LeadId" type="String"/>
+    
+    
+</aura:event>

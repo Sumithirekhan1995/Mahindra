@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Capture_CreatedDateTime</fullName>
+        <field>CreatedDateTime__c</field>
+        <formula>NOW()</formula>
+        <name>Capture CreatedDateTime</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_To_Read_Only</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Autofin_Read_Only</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Change To Read Only</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_status_hot</fullName>
+        <field>Status__c</field>
+        <literalValue>Hot</literalValue>
+        <name>Set status hot</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateCategoryHot</fullName>
+        <field>Category__c</field>
+        <literalValue>Hot</literalValue>
+        <name>UpdateCategoryHot</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateCold</fullName>
+        <field>Category__c</field>
+        <literalValue>Cold</literalValue>
+        <name>UpdateCold</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateComplaint</fullName>
+        <field>Category__c</field>
+        <literalValue>Complaint</literalValue>
+        <name>UpdateComplaint</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateDNC</fullName>
+        <field>Category__c</field>
+        <literalValue>DNC</literalValue>
+        <name>UpdateDNC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateStageFollowUp</fullName>
+        <field>Status</field>
+        <literalValue>Follow Up</literalValue>
+        <name>UpdateStageFollowUp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateWarm</fullName>
+        <field>Category__c</field>
+        <literalValue>Warm</literalValue>
+        <name>UpdateWarm</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Autofin_Lead_Owner</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Autofin_Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Update Autofin Lead Owner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Counter_Field</fullName>
+        <field>Follow_Up_Counter__c</field>
+        <formula>Follow_Up_Counter__c + 1</formula>
+        <name>Update Counter Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_DealerCode</fullName>
+        <field>Dealer_Code__c</field>
+        <formula>Dealer__r.Code__c</formula>
+        <name>Update DealerCode</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Lead_Followup</fullName>
+        <field>Status</field>
+        <literalValue>Follow Up</literalValue>
+        <name>Update Lead Followup</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage</fullName>
+        <field>Status</field>
+        <literalValue>Working</literalValue>
+        <name>Update Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_LEad</fullName>
+        <field>Status</field>
+        <literalValue>Lost</literalValue>
+        <name>Update Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_to_Lost</fullName>
+        <field>Status</field>
+        <literalValue>Lost</literalValue>
+        <name>Update Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_ressaignment</fullName>
+        <field>Reassignment__c</field>
+        <literalValue>Yes</literalValue>
+        <name>Update ressaignment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>set_status_to_buy_in_future</fullName>
+        <field>Status__c</field>
+        <literalValue>Buy in Future</literalValue>
+        <name>set status to buy in future</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>set_status_to_cold</fullName>
+        <field>Status__c</field>
+        <literalValue>Cold</literalValue>
+        <name>set status to cold</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>set_status_to_warm</fullName>
+        <field>Status__c</field>
+        <literalValue>Warm</literalValue>
+        <name>set status to warm</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Status</fullName>
+        <field>Status__c</field>
+        <literalValue>Follow up</literalValue>
+        <name>update Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_category</fullName>
+        <field>Category__c</field>
+        <literalValue>Cold</literalValue>
+        <name>update category</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Capture Created Date</fullName>
+        <actions>
+            <name>Capture_CreatedDateTime</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.CreatedById</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Check for reassignment</fullName>
+        <actions>
+            <name>Update_ressaignment</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.Status__c</field>
+            <operation>equals</operation>
+            <value>Language Issue</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FinFollowupTask</fullName>
+        <actions>
+            <name>Followup_Task</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT(ISBLANK( Follow_Up_Date_Time__c )) &amp;&amp; ISCHANGED(Follow_Up_Date_Time__c ) &amp;&amp; RecordType.Name = &apos;Finance&apos;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FollowUpTaskOnLead</fullName>
+        <actions>
+            <name>Update_Counter_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Lead_Followup</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>update_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Follow_Up_Task</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT(ISBLANK( Follow_Up_Date_Time__c )) &amp;&amp; ISCHANGED(Follow_Up_Date_Time__c ) &amp;&amp;  RecordType.Name  &lt;&gt; &apos;Finance&apos; &amp;&amp; NOT(ISPICKVAL(Lead_Flag__c  , &apos;Reserve&apos;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>MakeStageAsLost</fullName>
+        <actions>
+            <name>Update_Stage_LEad</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>RecordType.Name  = &apos;Finance&apos; &amp;&amp;  ISCHANGED(Status__c ) &amp;&amp;  OR (  ISPICKVAL( Status__c , &apos;Wrong No&apos;),        ISPICKVAL( Status__c , &apos;Wrong Number&apos;),        ISPICKVAL( Status__c , &apos;Clash&apos;),       ISPICKVAL( Status__c , &apos;Not Applicable&apos;),       ISPICKVAL( Status__c , &apos;Lost&apos;),       ISPICKVAL( Status__c , &apos;Closed&apos;),       ISPICKVAL( Status__c , &apos;Already Won&apos;),       ISPICKVAL( Status__c , &apos;Already Converted&apos;)     )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Status to hot if buying time is 0-15</fullName>
+        <actions>
+            <name>Set_status_hot</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Buying_Time__c</field>
+            <operation>equals</operation>
+            <value>0 - 15</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set status buy in future if buying time is %3E60</fullName>
+        <actions>
+            <name>set_status_to_buy_in_future</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>update_category</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Buying_Time__c</field>
+            <operation>equals</operation>
+            <value>&gt;60</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set status to cold if buying time is 31-45</fullName>
+        <actions>
+            <name>set_status_to_cold</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Buying_Time__c</field>
+            <operation>equals</operation>
+            <value>31 - 45</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set status to warm if buying time is 16-30</fullName>
+        <actions>
+            <name>set_status_to_warm</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Buying_Time__c</field>
+            <operation>equals</operation>
+            <value>16 - 30</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Switch Autofin Read Only</fullName>
+        <actions>
+            <name>Change_To_Read_Only</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Autofin_Lead_Owner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>equals</operation>
+            <value>Qualified</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Autofin</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update DealerCode</fullName>
+        <actions>
+            <name>Update_DealerCode</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT(ISBLANK(Dealer__c) )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Stage Working</fullName>
+        <actions>
+            <name>Update_Stage</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If lead owner is changed from queue to user, change the stage to working.</description>
+        <formula>AND(ISCHANGED( OwnerId ), LEFT(PRIORVALUE(OwnerId),3) = &quot;00G&quot;, BEGINS( OwnerId , &quot;005&quot;) ) &amp;&amp;  ISPICKVAL( Status , &apos;New&apos;) &amp;&amp;  RecordType.Name = &quot;Buyer Used Car&quot;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Stage to Lost</fullName>
+        <actions>
+            <name>Update_Stage_to_Lost</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Status__c</field>
+            <operation>equals</operation>
+            <value>Lost,Not interested,Invalid Number</value>
+        </criteriaItems>
+        <description>If status is lost, not interested and invalid number, then update stage to lost.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateStage</fullName>
+        <actions>
+            <name>UpdateStageFollowUp</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Status__c</field>
+            <operation>contains</operation>
+            <value>Call Back</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateStatucComplaint</fullName>
+        <actions>
+            <name>UpdateComplaint</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Status__c</field>
+            <operation>equals</operation>
+            <value>Pre-Sale Complaint,Dispute at dealership</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateStatusCold</fullName>
+        <actions>
+            <name>UpdateCold</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Status__c</field>
+            <operation>equals</operation>
+            <value>Cold,Lost,Not interested</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateStatusDNC</fullName>
+        <actions>
+            <name>UpdateDNC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Status__c</field>
+            <operation>equals</operation>
+            <value>Do Not Call,Invalid Number</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateStatusHot</fullName>
+        <actions>
+            <name>UpdateCategoryHot</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Status__c</field>
+            <operation>equals</operation>
+            <value>Hot,Visiting,Finalised,Walk-in,Test Drive,Call Back,Number Busy,Language Issue</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateStatusWarm</fullName>
+        <actions>
+            <name>UpdateWarm</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Status__c</field>
+            <operation>equals</operation>
+            <value>Warm,Search,No response,Interested in New Car,Interested in CV,Switched Off Not Reachable</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Follow_Up_Task</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Lead.Follow_Up_Date_Time__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Follow Up Task</subject>
+    </tasks>
+    <tasks>
+        <fullName>Followup_Task</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Lead.Follow_Up_Date_Time__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Followup Task</subject>
+    </tasks>
+</Workflow>

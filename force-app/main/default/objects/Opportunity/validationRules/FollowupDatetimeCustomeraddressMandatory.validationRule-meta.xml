@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FollowupDatetimeCustomeraddressMandatory</fullName>
+    <active>true</active>
+    <description>&quot;Follow up date and time&quot; and &quot;Customer address&quot;  fields are mandatory whenever the stage is set to  Enquiry or Walk in or Test Drive</description>
+    <errorConditionFormula>AND(
+OR(
+$Profile.Name=&quot;Buyer Lead CRE Agents&quot;),
+ISCHANGED(StageName)|| ISCHANGED(status__c),
+OR(
+ISPICKVAL(StageName, &apos;Enquiry&apos;),
+ISPICKVAL(StageName, &apos;Walk in&apos;),
+ISPICKVAL(StageName, &apos;Test Drive&apos;),
+ISPICKVAL(status__c, &apos;Qualified&apos;),
+ISPICKVAL(status__c, &apos;Visit Scheduled&apos;),
+ISPICKVAL(status__c, &apos;Visit Rescheduled&apos;),
+ISPICKVAL(status__c, &apos;Test Drive Scheduled&apos;),
+ISPICKVAL(status__c, &apos;Test Drive Rescheduled&apos;),
+ISPICKVAL(status__c, &apos;Test Drive Completed&apos;),
+ISPICKVAL(status__c, &apos;Test Drive&apos;)),
+OR(
+ISBLANK(Followup_Date_Time__c),
+ISBLANK(Customer_Address__c)))</errorConditionFormula>
+    <errorMessage>Followup Date/Time &amp; Customer Address fields are mandatory whenever the stage is set to  Enquiry or Walk in or Test Drive</errorMessage>
+</ValidationRule>

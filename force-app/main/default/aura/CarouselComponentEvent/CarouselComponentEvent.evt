@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="projectName" type= "String"/>
+    <aura:attribute name="phaseName" type= "String"/>
+    <aura:attribute name="lotName" type= "String"/>
+    <aura:attribute name="cardTitle" type="String" />
+</aura:event>

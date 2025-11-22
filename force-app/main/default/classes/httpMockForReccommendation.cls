@@ -1,0 +1,11 @@
+@isTest
+global class httpMockForReccommendation implements HttpCalloutMock{
+    global HTTPResponse respond(HTTPRequest req){
+        HttpResponse res = new HttpResponse();
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody('{ "status_code": 200, "response": { "data": { "recommended": [ { "id_car_model": "1304", "min_price": "299800", "max_price": "448200", "model_name": "Alto 800", "manufacturer_name": "Maruti Suzuki", "min_mileage": "24.70", "max_mileage": "31.39", "rating": "6.6" }, { "id_car_model": "1415", "min_price": "283000", "max_price": "477000", "model_name": "Redi GO", "manufacturer_name": "Datsun", "min_mileage": "20.71", "max_mileage": "22.00", "rating": "7.6" }, { "id_car_model": "1204", "min_price": "236447", "max_price": "334768", "model_name": "Nano", "manufacturer_name": "Tata", "min_mileage": "21.90", "max_mileage": "21.90", "rating": "6.6" }, { "id_car_model": "1356", "min_price": "399000", "max_price": "645000", "model_name": "Go", "manufacturer_name": "Datsun", "min_mileage": "19.02", "max_mileage": "19.59", "rating": "6.4" }, { "id_car_model": "1354", "min_price": "453200", "max_price": "578000", "model_name": "Celerio", "manufacturer_name": "Maruti Suzuki", "min_mileage": "23.10", "max_mileage": "31.79", "rating": "6.5" }, { "id_car_model": "1564", "min_price": "463190", "max_price": "631190", "model_name": "New Santro", "manufacturer_name": "Hyundai", "min_mileage": "20.30", "max_mileage": "30.48", "rating": "8.0" } ], "cross-sell": [ { "id_car_model": "1324", "min_price": "617000", "max_price": "1150000", "model_name": "Amaze", "manufacturer_name": "Honda", "min_mileage": "18.30", "max_mileage": "24.70", "rating": "7.8" }, { "id_car_model": "1113", "min_price": "1358000", "max_price": "1931000", "model_name": "XUV500", "manufacturer_name": "Mahindra", "min_mileage": "13.60", "max_mileage": "13.60", "rating": "7.2" }, { "id_car_model": "1117", "min_price": "1242000", "max_price": "1627000", "model_name": "Scorpio", "manufacturer_name": "Mahindra", "min_mileage": "15.37", "max_mileage": "15.37", "rating": "7.3" } ] } } }');
+        res.setStatusCode(200);
+        return res;
+    }
+
+}

@@ -1,0 +1,447 @@
+<aura:component controller="EntitySearchController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >    
+    <ltng:require styles="{!$Resource.nouislider + '/nouislider.css'}" 
+                  scripts="{!$Resource.nouislider + '/nouislider.js'}"/>  
+    
+    <aura:registerEvent name="UpdateSearchValues" type="c:SearchRelevantEntityEvent"/>
+    <aura:registerEvent name="CarouselComponentEvent" type="c:CarouselComponentEvent"/>
+    
+    <!-- Line 9 and 10 added by Aravindan -->
+    <aura:registerEvent name="UpdateToNull" type="c:setNull"/>
+    <aura:attribute name="ButtonName" type="String" default=""/>
+    
+    <!--<aura:attribute name="recordId" type="Id" description = "Lead recordId"/>-->
+    <aura:attribute name="searchType" type="String" default="Stock"/>
+    <aura:attribute name="dealerName" type="String" default=""/>
+    <aura:attribute name="modelName" type="String" default=""/>
+    <aura:attribute name="makeName" type="String" default=""/>
+    <aura:attribute name="city" type="String" default=""/>
+    <aura:attribute name="pincode" type="String" default=""/>
+    
+    
+    <aura:attribute name="dealerNameOptions" type="List" default="[]"/>
+    <aura:attribute name="makeNameOptions" type="List" default="[]"/>
+    <aura:attribute name="modelNameOptions" type="List" default="[]"/>
+    <aura:attribute name="variant" type="List" default="[]"/>
+    
+    <aura:attribute name="minBudgetFilter" type="integer" default ="0"/>
+    <aura:attribute name="maxBudgetFilter" type="integer" default ="99999999" />
+    <aura:attribute name="minKmFilter" type="integer" default ="0"/>
+    <!--START 23 June 2022, Ankit: Check Dealer Stock Search sync with website (CRM-849)-->
+    <aura:attribute name="maxKmFilter" type="integer" default ="99999999"/>
+    <!--END 23 June 2022, Ankit: Check Dealer Stock Search sync with website (CRM-849)-->
+    <aura:attribute name="state" type="String" default =""/>
+    
+    
+    
+    <!-- <aura:attribute name="kmStep" type="integer" default="1000" description = "Value to move the slider type Km"/>
+    <aura:attribute name="budgetStep" type="integer" default="100000" description = "Value to move the slider type Budget"/>
+    
+    <aura:attribute name="kmMax" type="integer" default="2000000" description="Set Default Max value to slider type Room"/>
+    <aura:attribute name="budgetMax" type="integer" default="100000000" description="Set Default Max value to slider type Size"/>
+    
+    
+    <aura:attribute name="minBudgetFilter" type="integer" default="0" description = "Select Minimum value for searching Budget in slider"/>
+    <aura:attribute name="maxBudgetFilter" type="integer" default="100000000" description = "Select Maximum value for searching Budget in slider"/>
+    <aura:attribute name="minKmFilter" type="integer" default="0" description = "Select Minimum value for searching Km in slider"/>
+    <aura:attribute name="maxKmFilter" type="integer" default="2000000" description = "Select Minimum value for searching Km in slider"/>
+    -->
+    <aura:attribute name="HideSpinnerRelevant" type="Boolean" default="false" description = "Show or hide spinner"/>
+    
+    <aura:attribute name="showSpinner" type="Boolean" access="Global" description = ""/>
+    <aura:attribute name="loaded" type="Boolean" access="Global" description = ""/>
+    <aura:attribute name="SearchPressed" type="Boolean" access="Global" description = ""/>
+    
+    <aura:attribute name="selectedDealerLookUpRecords" type="list" default="[]"/>
+    <aura:attribute name="selectedCityLookUpRecords" type="list" default="[]"/>
+    <!--13-08-2021-->
+    <aura:attribute name="selectedStateLookUpRecords" type="list" default="[]"/>
+    <!--13-08-2021-->
+    <aura:attribute name="selectedPincodeLookUpRecords" type="list" default="[]"/>
+    <aura:attribute name="selectedMakeLookUpRecords" type="list" default="[]"/>
+    <aura:attribute name="selectedModelLookUpRecords" type="list" default="[]"/>
+    <aura:attribute name="selectedVariantLookUpRecords" type="list" default="[]"/>
+    <aura:attribute name="selectedBodyTypeLookUpRecords" type="list" default="[]"/>
+    <aura:attribute name="selectedFuelLookUpRecords" type="list" default="[]"/>
+    <!--06-03-2023-->
+    <aura:attribute name="selectedTransmissionTypeLookUpRecords" type="list" default="[]"/>
+    <!--06-03-2023-->
+    <aura:attribute name="selectedColorLookUpRecords" type="list" default="[]"/>
+    <aura:attribute name="selectedModelYearLookUpRecords" type="list" default="[]"/>
+    <aura:attribute name="selectedModelMonthLookUpRecords" type="list" default="[]"/>
+    <aura:attribute name="selectedCertifiedLookUpRecords" type="list" default="[]"/>
+    <aura:attribute name="selectedMake" type="String" />
+    <aura:attribute name="selectedModel" type="String" />
+    <aura:attribute name="ListOfYears" type="List" default="[]" />
+    
+    <aura:attribute name="listControllingValues" type="list" default="[]" description="to store controller field values"/>
+    <aura:attribute name="listDependingValues" type="list" default="['--- None ---']" description="to store dependent field values"/>
+    <aura:attribute name="listDependingValuesVariants" type="list" default="['--- None ---']" description="to store dependent field values of Variant"/>
+    
+    
+    <aura:attribute name="depnedentFieldMap" type="map" description="map to store dependent values with controlling value"/>
+    <aura:attribute name="bDisabledDependentFld" type="boolean" default="true"/> 
+    <aura:attribute name="objDetail" type="contact" default="{'sobjectType' : 'Account'}"/>
+    <aura:attribute name="controllingFieldAPI" type="string" default="Make__c" description="store field API name of Controller field"/>
+    <aura:attribute name="dependingFieldAPI" type="string" default="Model__c" description="store field API name of dependent field"/>
+    <aura:attribute name="variantDisplay" type="Boolean" default="true" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:handler event="c:RangeSliderEvent" action="{!c.sliderUpdated}"/>
+    
+    
+    
+    <!--  <lightning:tabset selectedTabId="one"> -->
+    <!--        <lightning:tab id="one" onactive="{!c.tabOneActive}"></lightning:tab>-->
+    <lightning:card variant="base" class="slds-card_boundary">
+        <aura:set attribute="actions"></aura:set>        
+        <aura:set attribute="footer">
+            <lightning:layout horizontalAlign="Space">
+                <lightning:layoutItem padding="around-small">
+                    <lightning:button type="submit" label="Search Dealer" class="slds-m-right_small slds-theme_brand" onclick="{!c.searchDealer}" variant="success"/>
+                    <lightning:button type="submit" label="Search Stock" class="slds-m-right_small slds-theme_brand" onclick="{!c.searchStock}" variant="success"/>
+                    <lightning:button aura:id="reset" type="reset" label="Reset" class="slds-m-right_small slds-theme_destructive" onclick="{!c.clear}" variant="destructive"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </aura:set>
+        <div class="slds-card__body_inner">
+            <div class="search-field">
+                
+                <div Style="padding:10px;padding-top:0;">
+                    <div class="slds-grid slds-wrap slds-grid--vertical-align-center slds-grid--pull-padded">
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">                          <!--shubh start-->
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <c:ReUsableMultiSelectLookup objectAPIName="account"
+                                                             lstSelectedRecords="{!v.selectedDealerLookUpRecords}"
+                                                             label="Dealer Name" 
+                                                             searchPlaceHolder="Search Dealers"/><!--IconName="standard:account"-->
+                            </div>
+                        </div>           <!--shubh end-->
+                        
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <lightning:select name="controllerFld"
+                                                  value="{!v.selectedMakeLookUpRecords}"
+                                                  label="Make"
+                                                  onchange="{!c.onControllerFieldChange}" >
+                                    <aura:iteration items="{!v.listControllingValues}" var="val">
+                                        <option value="{!val}">{!val}</option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <lightning:select name="dependentFld" aura:id="ModelValue"
+                                                  value="{!v.selectedModelLookUpRecords}"
+                                                  label="Model Name"
+                                                  disabled="{!v.bDisabledDependentFld}"
+                                                  onchange="{!c.makeTrueForVAriant}">
+                                    
+                                    <aura:iteration items="{!v.listDependingValues}" var="val">
+                                        <option value="{!val}">{!val}</option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <lightning:select name="Variant" label="Variant" 
+                                                  required="false"
+                                                  value="{!v.selectedVariantLookUpRecords}" 
+                                                  disabled="{!v.variantDisplay}">
+                                    <option value="">---None---</option>
+                                    <aura:iteration items="{!v.listDependingValuesVariants}" var="val">
+                                        <option value="{!val}">{!val}</option>
+                                    </aura:iteration>
+                                </lightning:select>                                        
+                            </div>
+                        </div>
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <lightning:select name="BodyType" 
+                                                  label="Body Type" 
+                                                  required="false"
+                                                  value="{!v.selectedBodyTypeLookUpRecords}">
+                                    <option value="">---None---</option>
+                                    <option value="Hatchback">Hatchback</option>
+                                    <option value="Sedan">Sedan</option>
+                                    <option value="SUV">SUV</option>
+                                    <option value="MUV">MUV</option>
+                                </lightning:select>
+                            </div>
+                        </div> 
+                        
+                        
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <lightning:select name="select1" label="Fuel" required="false" value="{!v.selectedFuelLookUpRecords}" >
+                                    <option value="">---None---</option>
+                                    <option value="Petrol">Petrol</option>
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="CNG">CNG</option>
+                                    <option value="Electric">Electric</option>
+                                </lightning:select>
+                            </div>
+                        </div>
+                        
+                   <!--06-03-2023-->
+                      <!--  <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col-padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <lightning:select name="select4" label="TransmissionType" required="false" value="{!v.selectedTransmissionTypeLookUpRecords}" >
+                                    <option value="">-None-</option>
+                                    <option value="Automatic">Automatic</option>
+                                    <option value="Manual">Manual</option>
+                                    <option value="CVT">CVT</option>
+                                    <option value="Others">Others</option>
+                                </lightning:select>
+                            </div>
+                        </div> -->
+                   <!--06-03-2023--> 
+                        
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <lightning:select aura:id="Last100Years" label="Model Years" name="Years" value="{!v.selectedModelYearLookUpRecords}">
+                                    <option value="">---None---</option> 
+                                    <aura:iteration items="{!v.ListOfYears}" var="y">
+                                        <option value="{!y}">{!y}</option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <c:ReUsableMultiSelectLookup objectAPIName="Product2"
+                                                             lstSelectedRecords="{!v.selectedColorLookUpRecords}"
+                                                             label="Color"
+                                                             fieldAPIName = "Color__c" 
+                                                             searchPlaceHolder="Search Color"/><!--IconName="standard:account"-->
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <lightning:select name="select2" label="Model Month" required="false" value="{!v.selectedModelMonthLookUpRecords}" >
+                                    <option value="" >---None---</option>
+                                    <option value="1">JAN</option>
+                                    <option value="2">FEB</option>
+                                    <option value="3">MAR</option>
+                                    <option value="4">APR</option>
+                                    <option value="5">MAY</option>
+                                    <option value="6">JUN</option>
+                                    <option value="7">JUL</option>
+                                    <option value="8">AUG</option>
+                                    <option value="9">SEP</option>
+                                    <option value="10">OCT</option>
+                                    <option value="11">NOV</option>
+                                    <option value="12">DEC</option>
+                                </lightning:select>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <lightning:select name="select3" label="Certified?" required="false" value="{!v.selectedCertifiedLookUpRecords}">
+                                    <option value="" >---None---</option>
+                                    <option value="YES">YES</option>
+                                    <option value="NO">NO</option>
+                                </lightning:select>
+                            </div>
+                        </div>
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <c:ReUsableMultiSelectLookup objectAPIName="Product2"
+                                                             lstSelectedRecords="{!v.selectedPincodeLookUpRecords}"
+                                                             label="Pincode"
+                                                             fieldAPIName = "MFC_Dealer_PinCode__c" 
+                                                             searchPlaceHolder="Search Pincode"/>
+                            </div> 
+                        </div>
+                        
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <c:ReUsableMultiSelectLookup objectAPIName="Product2"
+                                                             lstSelectedRecords="{!v.selectedCityLookUpRecords}"
+                                                             label="City"
+                                                             fieldAPIName = "MFC_Dealer_City__c" 
+                                                             searchPlaceHolder="Search for Cities"/>
+                            </div>
+                            
+                        </div>
+                        <!--13-08-2021-->
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                <c:ReUsableMultiSelectLookup objectAPIName="Product2"
+                                                             lstSelectedRecords="{!v.selectedStateLookUpRecords}"
+                                                             label="State"
+                                                             fieldAPIName = "MFC_Dealer_State__c" 
+                                                             searchPlaceHolder="Search State"/>
+                            </div> 
+                        </div>
+                        <!--13-08-2021-->
+                        
+                        
+                        
+                        
+                        <!--     <div class="slds-grid slds-wrap slds-grid- -vertical-align-center slds-grid- -pull-padded"></div>-->
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">   
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">Min Kilometer
+                                
+                                <lightning:input type="number" name="MinKilometer"  value="{!v.minKmFilter}"/>
+                                <!--<c:RangeSliderComponent names="Km" 
+                                                        minRange="{!v.minKmFilter}" 
+                                                        maxRange="{!v.maxKmFilter}" 
+                                                        maxValue = "{!v.kmMax}" 
+                                                        minValue="0" 
+                                                        steps = "{!v.kmStep}"/>-->
+                            </div>    
+                        </div> 
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">Max Kilometer</div>
+                            
+                            <lightning:input type="number" name="MaxKilometer"  value="{!v.maxKmFilter}"/>
+                        </div> 
+                        
+                        
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">Min Budget</div>
+                            <lightning:input type="number" name="MinBudget"  value="{!v.minBudgetFilter}"/>
+                            <!--  <c:RangeSliderComponent names="Budget" 
+                                                        minRange="{!v.minBudgetFilter}"
+                                                        maxRange="{!v.maxBudgetFilter}"
+                                                        maxValue = "{!v.budgetMax}" 
+                                                        minValue="0" 
+                                                        steps = "{!v.budgetStep}"/> -->
+                            
+                            
+                        </div>
+                        <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col--padded">
+                            <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">Max Budget</div>
+                            <lightning:input type="number" name="MaxBudget"  value="{!v.maxBudgetFilter}"/>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <aura:renderIf isTrue="{!v.HideSpinnerRelevant}">
+                <div class="slds-spinner_container slds-is-fixed" >
+                    <div class="slds-spinner--brand slds-spinner slds-spinner--large" role="alert">
+                        <span class="slds-assistive-text">Loading, Please Wait...</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </aura:renderIf>
+            
+        </div>
+    </lightning:card>
+    
+    <!--     <lightning:tab label="Search Dealer" id="two" onactive="{!c.tabTwoActive}">    
+            <lightning:card variant="base" class="slds-card_boundary">
+                <aura:set attribute="actions"></aura:set>        
+                <aura:set attribute="footer">
+                    <lightning:layout horizontalAlign="Space">
+                        <lightning:layoutItem padding="around-small">                    
+                            <lightning:button type="submit" label="Search" class="slds-m-right_small slds-theme_brand" onclick="{!c.goSearchProperties}" variant="success"/>
+                            <lightning:button aura:id="reset" type="reset" label="Reset" class="slds-m-right_small slds-theme_destructive" onclick="{!c.clear1}" variant="destructive"/>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </aura:set>       
+                
+                <div class="slds-card__body_inner">
+ 
+                    <div class="search-field">
+                        <div Style="padding: 10px;">
+                            <div class="slds-grid slds-wrap slds-grid- -vertical-align-center slds-grid- -pull-padded">
+                              <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col- -padded">
+                                    <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                        <lightning:select name="controllerFld"
+                                                          value="{!v.selectedMake}"
+                                                          label="Make"
+                                                          onchange="{!c.onControllerFieldChange}" >
+                                            <aura:iteration items="{!v.listControllingValues}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>
+                                    </div>
+                                </div>
+                                <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col- -padded">
+                                    <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                        <lightning:select name="dependentFld"
+                                                          value="{!v.selectedModel}"
+                                                          label="Model"
+                                                          disabled="{!v.bDisabledDependentFld}">
+                                            <aura:iteration items="{!v.listDependingValues}" var="val">
+                                                <option value="{!val}">{!val}</option>
+                                            </aura:iteration>
+                                        </lightning:select>
+                                    </div>
+                                </div>
+                                <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col- -padded">
+                                    <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                        <c:ReUsableMultiSelectLookup objectAPIName="account"
+                                                                     lstSelectedRecords="{!v.selectedDealerLookUpRecords}"
+                                                                     label="Dealer Name" 
+                                                                     searchPlaceHolder="Search Dealers"/>  
+                                </div>
+                                </div>
+                                <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col- -padded">
+                                    <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                        <c:ReUsableMultiSelectLookup objectAPIName="account"
+                                                                     lstSelectedRecords="{!v.selectedCityLookUpRecords}"
+                                                                     label="City"
+                                                                     fieldAPIName = "BillingCity"
+                                                                     searchPlaceHolder="Search City"/>
+                                        
+                                    </div>
+                                </div>
+                                <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col- -padded">
+                                    <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                        <c:ReUsableMultiSelectLookup objectAPIName="account"
+                                                                     lstSelectedRecords="{!v.selectedPincodeLookUpRecords}"
+                                                                     label="Pincode"
+                                                                     fieldAPIName = "BillingPostalCode"
+                                                                     searchPlaceHolder="Search Pincode"/>
+                                </div>
+                                </div>
+                                
+                                <div class="slds-size_1-of-2 slds-max-small-size_1-of-1 slds-col- -padded">
+                                    <div class="slds-text-align_center slds-text-title slds-text-color_default Text-body">
+                                        <c:ReUsableMultiSelectLookup objectAPIName="account"
+                                                                     lstSelectedRecords="{!v.selectedStateLookUpRecords}"
+                                                                     label="State" 
+                                                                     fieldAPIName = "BillingState"
+                                                                     searchPlaceHolder="Search Statess"/>
+                                 </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <aura:renderIf isTrue="{!v.HideSpinnerRelevant}">
+                        <div class="slds-spinner_container slds-is-fixed" >
+                            <div class="slds-spinner- -brand slds-spinner slds-spinner- -large" role="alert">
+                                <span class="slds-assistive-text">Loading, Please Wait...</span>
+                                <div class="slds-spinner__dot-a"></div>
+                                <div class="slds-spinner__dot-b"></div>
+                            </div>
+                        </div>
+                    </aura:renderIf>
+                    
+                </div>
+            </lightning:card>  
+        </lightning:tab>  -->
+    
+    <!--   </lightning:tabset> -->
+    
+    
+    
+</aura:component>

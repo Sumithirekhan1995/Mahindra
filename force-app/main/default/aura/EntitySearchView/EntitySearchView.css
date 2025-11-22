@@ -1,0 +1,76 @@
+.THIS .Text-title{
+    font-size:14px;
+}
+
+.THIS .Text-body {
+    font-size:12px;
+}
+.THIS .slds-table_fixed-layout, .THIS .slds-table--fixed-layout {
+    table-layout: fixed;
+    width: 150%;
+    white-space: nowrap;
+}
+
+.THIS .Img-size {
+    width: auto; 
+    height: 300px;
+}
+
+.THIS .HideSection {
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+.THIS .Text-title{
+    font-size:11px;
+}
+
+.THIS .Text-body {
+    font-size:10px;
+}
+        .THIS .Next-line{
+        display: block;
+    }
+    
+    .THIS .Img-size {
+    width: auto; 
+    height: 250px;
+}
+}
+
+@media screen and (max-width: 800px) {
+.THIS .Text-title{
+    font-size:11px;
+}
+
+.THIS .Text-body {
+    font-size:10px;
+}
+        .THIS .Next-line{
+        display: block;
+    }
+    
+    .THIS .Img-size {
+    width: auto; 
+    height: 200px;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+.THIS .Text-title{
+    font-size:11px;
+}
+
+.THIS .Text-body {
+    font-size:10px;
+}
+.THIS .Next-line{
+        display: block;
+    }
+    
+    .THIS .Img-size {
+    width: auto; 
+    height: 150px;
+}
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_ID_check</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISBLANK( Transaction_ID__c ) , 
+ISPICKVAL( Status__c , &quot;Payment pending&quot;)
+||ISPICKVAL( Status__c ,&quot;Payment successful&quot;)
+||ISPICKVAL( Status__c ,&quot;Not-Interested after link sent&quot;)
+||ISPICKVAL( Status__c ,&quot;No response after link sent&quot;) )</errorConditionFormula>
+    <errorMessage>Please enter the Transaction ID</errorMessage>
+</ValidationRule>

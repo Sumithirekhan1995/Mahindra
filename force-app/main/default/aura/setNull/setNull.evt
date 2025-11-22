@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION" description="Event template">
+
+	<aura:attribute name="searchType" type="String"/> 
+    <aura:attribute name="ButtonName" type="String" />
+</aura:event>

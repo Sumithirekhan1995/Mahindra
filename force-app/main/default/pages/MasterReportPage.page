@@ -1,0 +1,72 @@
+<apex:page controller="MasterReportPageController" lightningStylesheets="true" showHeader="true" docType="html-5.0" >
+<apex:stylesheet value="/resource/SLDS0102/assets/styles/salesforce-lightning-design-system-ltng.css"/>
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <apex:stylesheet value="{!URLFOR($Resource.slds, 'assets/styles/salesforce-lightning-design-system.css')}" />
+    <apex:form >
+    <div class="foo" id="main"><!-- Note the "Scoping Class" is foo -->
+   <table class="slds-table slds-table--bordered slds-table--striped" border="1">
+        <thead>
+            <tr class="slds-line-height_reset"  style="font-weight:bold" >
+                <th class="" scope="col" style="background-color: rgb(243, 243, 243);">
+                    <div class="slds-truncate" title="Report Name">Report Name</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="slds-hint-parent">
+                <td data-label="Name">
+                    <div class="slds-truncate"><apex:commandLink action="{!TillDateExotelData}" value="Till Date Car and Bike Exotel Data"/></div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <td data-label="Name">
+                    <div class="slds-truncate"><apex:commandLink action="{!TillDateInbound}" value="Till Date Inbound"/></div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <td data-label="Name">
+                    <div class="slds-truncate"><apex:commandLink action="{!TillDateTollFree}" value="Till Date Toll Free"/></div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <td data-label="Name">
+                    <div class="slds-truncate"><apex:commandLink action="{!TillDateHISellerF1}" value="Till Date HI Seller Outbound Format1"/></div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <td data-label="Name">
+                    <div class="slds-truncate"><apex:commandLink action="{!TillDateHISellerF2}" value="Till Date HI Seller Outbound Format2"/></div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <td data-label="Name">
+                    <div class="slds-truncate"><apex:commandLink action="{!TillDateHISellerF3}" value="Till Date HI Seller Outbound Format3"/></div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <td data-label="Name">
+                    <div class="slds-truncate"><apex:commandLink action="{!TillDateHISellerSummary}" value="Till Date HI Seller Outbound - Summary"/></div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <td data-label="Name">
+                    <div class="slds-truncate"><apex:commandLink action="{!ZoneMTD}" value="Zone MTD"/></div>
+                </td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <td data-label="Name">
+                    <div class="slds-truncate"><apex:commandLink action="{!TillDateEcommerce}" value="Till Date Ecommerce"/></div>
+                </td>
+            </tr>
+            
+            <tr class="slds-hint-parent">
+                <td data-label="Name">
+                    <div class="slds-truncate"><apex:commandLink action="{!NewZoneReport}" value="New Zone Report"/></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </apex:form>
+    </html>
+</apex:page>

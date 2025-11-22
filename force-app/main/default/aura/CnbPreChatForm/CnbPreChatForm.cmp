@@ -1,0 +1,61 @@
+<aura:component  implements="lightningsnapin:prechatUI,flexipage:availableForAllPageTypes,lightning:actionOverride,force:appHostable" access="global">
+    <!--<ltng:require styles="{!$Resource.SLDSWInter21}"/ -->
+    <ltng:require styles="{!$Resource.CssForBot}"/>
+    <!-- Pre-chat field components to render -->
+    <!--aura:attribute name="prechatFieldComponents" type="List" description="An array of objects representing the pre-chat fields specified in pre-chat setup."/-->
+    <aura:attribute name="showErrorMessageFirstName" type="Boolean" default="false"/>
+    <aura:attribute name="showErrorMessageForLastName" type="Boolean" default="false"/>
+    <aura:attribute name="showErrorMessageForPhoneNumber" type="Boolean" default="false"/>
+    <!-- Handler for when this component is initialized -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+    
+    <!-- For Aura performance -->
+    <aura:locator target="startButton" description="Pre-chat form submit button."/>
+    
+    <!--START Added by Aravind on 08/10/2020-->
+    <lightningsnapin:prechatAPI aura:id="prechatAPI"/>
+    <aura:attribute name="prechatFieldComponents" type="List" description="An array of objects representing the pre-chat fields specified in pre-chat setup."/>
+    <lightningsnapin:settingsAPI aura:id="settingsAPI"/>
+    
+    <aura:attribute name="firstNameAtt" type="String" default=""/>
+    <aura:attribute name="lastNameAtt" type="String" default=""/>
+    <aura:attribute name="phoneNumAtt" type="String" default=""/>
+    <!--END Added by Aravind on 08/10/2020-->
+    
+    <!-- Contains methods for getting pre-chat fields, starting a chat, and validating fields -->
+    
+    <aura:if isTrue="{!v.showErrorMessageFirstName}">
+        <div style="background-color:#005290">
+            <p style="color:White;">First Name is Invalid</p>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.showErrorMessageForLastName}">
+        <div style="background-color:#005290">
+            <p style="color:White;">Last Name is Invalid</p>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.showErrorMessageForPhoneNumber}">
+        <div style="background-color:#005290">
+            <p style="color:White;">Phone Number is Invalid</p>
+        </div>
+    </aura:if>
+    
+    <br/>
+    <div class="prechatContent slds-form slds-form_stacked " style="text-align:center">
+        <center><p style="color:#005290;">First Name</p></center>
+        <lightning:input aura:id = "firstName" name="firstName" value="{!v.firstNameAtt}"/>
+        <center><p style="color:#005290;">Last Name</p></center>
+        <lightning:input aura:id = "lastName" name="lastName" value="{!v.lastNameAtt}"/>
+        <center><p style="color:#005290;">Phone</p></center>
+        <lightning:input aura:id = "phoneNum" name="phoneNum" value="{!v.phoneNumAtt}"/>
+        
+    </div>
+    <br/>
+    
+            <div class="startButtonWrapper slds-docked-form-footer" style="background-color:#005290;padding:0.1rem">
+                <lightning:button aura:id="startButton" class="startButton slds-button slds-button_neutral slds-button_stretch" label="{!$Label.LiveAgentPrechat.StartChat}"  onclick="{!c.handleStartButtonClick}"/>
+            </div>
+  
+                                                                                                                                                                       
+    
+</aura:component>

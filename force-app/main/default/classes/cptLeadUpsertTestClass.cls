@@ -1,0 +1,45 @@
+@isTest
+public class cptLeadUpsertTestClass {
+    public static testmethod void cptLeadPushToTest(){
+        
+        RestRequest request = new RestRequest();
+        RestResponse response = new RestResponse();
+        String S = '{"data":[{"sfdc_lead_id":"00Q1s000001Od7MEAS","lead_id":"","lead_category":"test","is_otp_verified":12345,"hi_serviceable":1,"lead_source":"MFC","lead_created_from":"ncd","vehicle_category":"PV","city_name":"test","hi_store":"test","state_name":"test","customer_name":"Manu RV","customer_mobile":"9784956564","customer_email":"abc@gmail.com","customer_address":"Bangalore","customer_pincode":"560010","evaluation_city":"Bangalore","evaluation_state":"Rajastan","registration_city":"Bangalore","registration_state":"Rajastan","evaluation_name":"Aravind","make":"Tata","model":"Swift vdi","variant":"V2","year":2011,"kilometer":9941,"total_owner":0,"registration_number":"KA11AS5788","colour":"Color2","source":"Source1","sub_source":"source2","inspect_type":"Showroom","inspected_date":"2019-10-29 17:08:47","status":"PV","valuation_remarks":"test","evaluator_name":"Raaji","evaluator_contact_number":"9897969091","evaluator_email":"awq@gmail.com","cpt_admin_name":"suchitraadmin","cpt_admin_contact_number":"9880758697","cpt_admin_email":"ba.suchitra@gmail.com","qc_approved_date":"2019-10-31 16:03:31","auction_id":28795,"auction_start_date":"2019-12-05 14:52:00","auction_end_date":"2019-12-07 20:52:00","live_followup_date":"2019-12-06 18:59:45","follwoup_remarks":"nothing","reject_reason":"simply","reject_date":"2019-12-05 14:52:00","deal_finalized_on":"2019-12-05 14:52:00","sold_out_on":"2019-12-05 14:52:00","ibb_price":0,"customer_expected_price":234555,"longitude":2.0002,"latitude":1.0001}]}';
+        request.requestUri ='https://mfcw--uat.my.salesforce.com/services/apexrest/sellerleadcreate';
+        request.requestUri ='https://mfcw--uat.my.salesforce.com/services/apexrest/leadupsert';
+        request.httpMethod = 'POST';
+        request.addHeader('Content-Type', 'application/json');
+        request.requestBody = Blob.valueOf(S);  
+        RestContext.request = request;
+        RestContext.response= response;
+        
+        test.startTest();
+        //, "":"Mobil
+        
+        
+        CptWebServices.getTheLeadInfo(); 
+        
+        S = '{"data":[{"sfdc_lead_id":"00Q0T000003YRmeUAG","is_otp_verified":12345,"hi_serviceable":1,"lead_source":"MFC","seller_price" : "2","valuator_assigned_visit_date":"2019-10-29 17:08:4","uid":1234,"lead_id":"","lead_created_from":"ncd","vehicle_category":"PV","city_name":"test","hi_store":"test","state_name":"test","customer_name":"Manu RV","customer_mobile":"9784956564","customer_email":"abc@gmail.com","customer_address":"Bangalore","customer_pincode":"560010","evaluation_city":"Bangalore","evaluation_state":"Rajastan","registration_city":"Bangalore","registration_state":"Rajastan","evaluation_name":"Aravind","make":"Tata","model":"Swift vdi","variant":"V2","year":2011,"kilometer":9941,"total_owner":0,"registration_number":"KA11AS5788","colour":"Color2","source":"Source1","sub_source":"source2","inspect_type":"Showroom","inspected_date":"2019-10-29 17:08:47","status":"PV","valuation_remarks":"test","evaluator_name":"Raaji","evaluator_contact_number":"9897969091","evaluator_email":"awq@gmail.com","cpt_admin_name":"suchitraadmin","cpt_admin_contact_number":"9880758697","cpt_admin_email":"ba.suchitra@gmail.com","qc_approved_date":"2019-10-31 16:03:31","auction_id":28795,"auction_start_date":"2019-12-05 14:52:00","auction_end_date":"2019-12-07 20:52:00","live_followup_date":"2019-12-06 18:59:45","follwoup_remarks":"nothing","reject_reason":"simply","reject_date":"2019-12-05 14:52:00","deal_finalized_on":"2019-12-05 14:52:00","sold_out_on":"2019-12-05 14:52:00","ibb_price":0,"customer_expected_price":234555,"longitude":"2.0002","latitude":"1.0001"}]}';
+        request.requestBody = Blob.valueOf(S);
+        CptWebServices.getTheLeadInfo(); 
+        
+        S = '{"data":[{"sfdc_lead_id":"","valuator_assigned_visit_date":"2019-10-29 17:08:4","ico_eligible_flag":"1","hi_serviceable":1,"seller_price":"2","whatsapp_consent":"1","lead_id":"2234123","lead_created_from":"ncd","vehicle_category":"PV","city_name":"test","state_name":"test","customer_name":"Manu RV","customer_mobile":"9784956564","customer_email":"abc@gmail.com","customer_address":"Bangalore","customer_pincode":"560010","evaluation_city":"Bangalore","evaluation_state":"Rajastan","registration_city":"Bangalore","registration_state":"Rajastan","evaluation_name":"Aravind","make":"Tata","model":"Swift vdi","variant":"V2","year":2011,"kilometer":9941,"total_owner":0,"registration_number":"KA11AS5788","colour":"Color2","source":"Source1","sub_source":"source2","inspect_type":"Showroom","inspected_date":"2019-10-29 17:08:47","status":"PV","valuation_remarks":"test","evaluator_name":"Raaji","evaluator_contact_number":"9897969091","evaluator_email":"awq@gmail.com","cpt_admin_name":"suchitraadmin","cpt_admin_contact_number":"9880758697","cpt_admin_email":"ba.suchitra@gmail.com","qc_approved_date":"2019-10-31 16:03:31","auction_id":28795,"auction_start_date":"2019-12-05 14:52:00","auction_end_date":"2019-12-07 20:52:00","live_followup_date":"2019-12-06 18:59:45","follwoup_remarks":"nothing","reject_reason":"simply","reject_date":"2019-12-05 14:52:00","deal_finalized_on":"2019-12-05 14:52:00","sold_out_on":"2019-12-05 14:52:00","ibb_price":0,"customer_expected_price":234555}]}';
+        request.requestBody = Blob.valueOf(S);
+        CptWebServices.getTheLeadInfo();  
+        
+          S = '{"data":[{"sfdc_lead_id":"","lead_id":"","lead_created_from":"ncd","ico_eligible_flag":"0","vehicle_category":"PV","city_name":"test","state_name":"test","customer_name":"Manu RV","customer_mobile":"9784956564","customer_email":"abc@gmail.com","customer_address":"Bangalore","customer_pincode":"560010","evaluation_city":"Bangalore","evaluation_state":"Rajastan","registration_city":"Bangalore","registration_state":"Rajastan","evaluation_name":"Aravind","make":"Tata","model":"Swift vdi","variant":"V2","year":2011,"kilometer":9941,"total_owner":0,"registration_number":"KA11AS5788","colour":"Color2","source":"Source1","sub_source":"source2","inspect_type":"Showroom","inspected_date":"2019-10-29 17:08:47","status":"PV","valuation_remarks":"test","evaluator_name":"Raaji","evaluator_contact_number":"9897969091","evaluator_email":"awq@gmail.com","cpt_admin_name":"suchitraadmin","cpt_admin_contact_number":"9880758697","cpt_admin_email":"ba.suchitra@gmail.com","qc_approved_date":"2019-10-31 16:03:31","auction_id":28795,"auction_start_date":"2019-12-05 14:52:00","auction_end_date":"2019-12-07 20:52:00","live_followup_date":"2019-12-06 18:59:45","follwoup_remarks":"nothing","reject_reason":"simply","reject_date":"2019-12-05 14:52:00","deal_finalized_on":"2019-12-05 14:52:00","sold_out_on":"2019-12-05 14:52:00","ibb_price":0,"customer_expected_price":234555}]}';
+        request.requestBody = Blob.valueOf(S);
+        CptWebServices.getTheLeadInfo();  
+        
+        s = '{ "data":[ { "year" : "2012", "whatsapp_consent" : null, "vehicle_category" : "PV", "variant" : "S MT", "valuator_visit_date_time" : null, "valuator_assigned_visit_date" : "2019-10-29 17:08:4", "valuation_remarks" : null, "utm_term" : null, "uid" : "test", "total_owner" : "3", "status" : "", "sold_out_on" : "", "sfdc_lead_id" : "", "seller_price" : "2", "reject_reason" : null, "reject_date" : "", "registration_state" : "", "registration_number" : "GJ013209", "registration_city" : "Lucknow", "qc_approved_date" : "", "model" : "BRIO(2011-2013)", "make" : "HONDA", "live_followup_date" : "", "lead_url" : null, "lead_id" : "", "lead_created_type" : null, "lead_created_from" : "cpt", "kilometer" : "91549", "inspected_date" : "2021-05-27 09:51:52", "inspect_type" : "Field", "ibb_price" : "149818", "follwoup_remarks" : "", "evaluator_name" : "dharmik", "evaluator_email" : "abc@gmail.com", "evaluator_contact_number" : "9448157813", "evaluation_state" : "Gujarat", "evaluation_city" : "AHMEDABAD", "deal_finalized_on" : "", "customer_pincode" : "", "customer_name" : "AJAY SUKHYANI ", "customer_mobile" : "9353570844", "customer_expected_price" : "200000", "customer_email" : "", "customer_address" : "", "cpt_admin_name" : null, "cpt_admin_email" : null, "cpt_admin_contact_number" : null, "colour" : "White", "auto_inspekt" : null, "auction_start_date" : "", "auction_id" : null, "auction_end_date" : "", "lead_source":"MFC", "lead_category":"Mobile", "is_otp_verified":1, "HI_serviceable":1, "HI_preference":"", "HI_Store":"", "Valuation_Schedule_Time_Slot":"", "referrer":"", "td_client_id":"", "marketing_source":"test", "marketing_campaign":"test", "marketing_device":"test", "marketing_content":"test", "marketing_medium":"test", "marketing_term":"test5","longitude":"2.0002","latitude":"1.000" } ] }';
+        request.requestBody = Blob.valueOf(S);
+        CptWebServices.getTheLeadInfo();  
+        
+        
+      
+        
+        test.stopTest();
+    }
+    
+    
+}

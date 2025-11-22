@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>All_Sold_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>All Sold Leads</label>
+        <sharedTo>
+            <group>Sold_Qualified_Leads</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>status__c</field>
+            <operation>equals</operation>
+            <value>Sold</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BNS_Auto</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BNS Auto</label>
+        <sharedTo>
+            <group>BNS_Auto</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>BNS Auto</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4253</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_Andhra_Telangana</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_Andhra_Telangana</label>
+        <sharedTo>
+            <group>BUC_Andhra_Telangana</group>
+        </sharedTo>
+        <booleanFilter>(1 OR 2 OR 3) AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>AP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>ANDHRA PRADESH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>TELANGANA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_Bengal</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_Bengal</label>
+        <sharedTo>
+            <group>BUC_Bengal</group>
+        </sharedTo>
+        <booleanFilter>(1 OR 2 ) AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>BENGAL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>WEST BENGAL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_Bihar</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_Bihar</label>
+        <sharedTo>
+            <group>BUC_Bihar</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>BIHAR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_Delhi</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_Delhi</label>
+        <sharedTo>
+            <group>BUC_Delhi</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>DELHI</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_East</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_East</label>
+        <sharedTo>
+            <group>BUC_East</group>
+        </sharedTo>
+        <booleanFilter>(1 OR 2 OR 3 OR 5 OR 8 OR 9 OR 10 OR 11 OR 12 OR 13 OR 14 OR 15 OR 16) AND 4 AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>JHARKHAND</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>ORISSA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>CHHATTISGARH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>ASSAM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>SIKKIM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>ARUNACHAL PRADESH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>MANIPUR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>MEGHALAYA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>MIZORAM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>TRIPURA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>NAGALAND</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>ODISHA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>CHATTISGARH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_Karnataka</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_Karnataka</label>
+        <sharedTo>
+            <group>BUC_Karnataka</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>KARNATAKA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_Kerala</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_Kerala</label>
+        <sharedTo>
+            <group>BUC_Kerala</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>KERALA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_Maharashtra</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_Maharashtra</label>
+        <sharedTo>
+            <group>BUC_Maharashtra</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>MAHARASHTRA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_North</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_North</label>
+        <sharedTo>
+            <group>BUC_North</group>
+        </sharedTo>
+        <booleanFilter>(1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 9 OR 12 OR 13) AND 8 AND 10 AND 11</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>JAMMU AND KASHMIR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>HARYANA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>PUNJAB</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>UTTAR PRADESH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>RAJASTHAN</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>UTTARAKHAND</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>CHANDIGARH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>JAMMU &amp; KASHMIR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>HIMACHAL PRADESH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>LADAKH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_Others</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_Others</label>
+        <sharedTo>
+            <group>BUC_Others</group>
+        </sharedTo>
+        <booleanFilter>(1 OR 2 OR 6 OR 7) AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>ANDAMAN AND NICOBAR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>LAKSHADWEEP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Area_State__c</field>
+            <operation>equals</operation>
+            <value>UNDEFINED</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>UNDEFINED</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_TamilNadu</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_TamilNadu</label>
+        <sharedTo>
+            <group>BUC_TamilNadu</group>
+        </sharedTo>
+        <booleanFilter>(1 OR 3 OR 6 OR 7 OR 8 OR 9) AND 2 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>TAMIL NADU</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>TAMILNADU</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Area_State__c</field>
+            <operation>equals</operation>
+            <value>PUDUCHERRY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Area_State__c</field>
+            <operation>equals</operation>
+            <value>PONDICHERRY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>PUDUCHERRY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>PONDICHERRY</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_West</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>BUC_West</label>
+        <sharedTo>
+            <group>BUC_West</group>
+        </sharedTo>
+        <booleanFilter>(1 OR 2 OR 3 OR 7 OR 8 ) AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>GUJARAT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>GOA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>MADHYA PRADESH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Stock_Type__c</field>
+            <operation>notEqual</operation>
+            <value>CARANDBIKE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>BUC_Duplicate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Area_State__c</field>
+            <operation>equals</operation>
+            <value>DAMAN AND DIU</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Area_State__c</field>
+            <operation>equals</operation>
+            <value>DADAR AND NAGAR HAVELI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Car_Zone</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Car Zone</label>
+        <sharedTo>
+            <group>Car_Zone</group>
+        </sharedTo>
+        <booleanFilter>1 AND ( 2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>Car Zone</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4325</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Carstock_Exchange</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Carstock Exchange</label>
+        <sharedTo>
+            <group>Carstock_Exchange</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>Carstock Exchange</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4203</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Chatbot_Cre</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Chatbot Cre</label>
+        <sharedTo>
+            <role>Chatbot_CRE</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>LeadSource</field>
+            <operation>equals</operation>
+            <value>MFC-Chat,MFC</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Cherish_Carmint</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Cherish Carmint</label>
+        <sharedTo>
+            <group>Cherish_Carmint</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>Cherish Carmint</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4365</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Kanav_Motors</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Kanav Motors</label>
+        <sharedTo>
+            <group>Kanav_Motors</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>Kanav Motors</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4310</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lost_Followup_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lost Followup Leads</label>
+        <sharedTo>
+            <group>Finance_Lost_Leads</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>StageName</field>
+            <operation>equals</operation>
+            <value>Closed Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Finance</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MGF_Motors</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MGF Motors</label>
+        <sharedTo>
+            <group>MGF_Motors</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>MGF Motors</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4311</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Mahindra_Finance_Exe</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Mahindra_Finance_Exe</label>
+        <sharedTo>
+            <group>Fin_Mahindra_Finance_Exe</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Finance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>LeadSource</field>
+            <operation>equals</operation>
+            <value>MAHINDRA FINANCE EXECUTIVE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>FIN_Duplicates</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Mahindra_First_Choice</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Mahindra First Choice</label>
+        <sharedTo>
+            <group>Mahindra_First_Choice</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>Mahindra First Choice</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4330</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Prestige_Autoworld_Pvt_Ltd</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Prestige Autoworld Pvt Ltd</label>
+        <sharedTo>
+            <group>Prestige_Autoworld_Pvt_Ltd</group>
+        </sharedTo>
+        <booleanFilter>1 AND ( 2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>Prestige Autoworld Pvt Ltd</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>242</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>R2W</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>R2W</label>
+        <sharedTo>
+            <group>FIN_R2W</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Lead_For__c</field>
+            <operation>equals</operation>
+            <value>Used Car,Tractor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>LeadSource</field>
+            <operation>equals</operation>
+            <value>R2W</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Finance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>FIN_Duplicates</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>R2W_AD_FIN</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>R2W_AD_FIN</label>
+        <sharedTo>
+            <group>FIN_R2W_AD</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Lead_For__c</field>
+            <operation>equals</operation>
+            <value>Mahindra New Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>LeadSource</field>
+            <operation>equals</operation>
+            <value>R2W</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Finance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>FIN_Duplicates</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>R2W_CV_FIN</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>R2W_CV_FIN</label>
+        <sharedTo>
+            <group>FIN_R2W_CV</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Lead_For__c</field>
+            <operation>equals</operation>
+            <value>Three Wheeler</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>LeadSource</field>
+            <operation>equals</operation>
+            <value>R2W</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Finance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>FIN_Duplicates</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>RDUAT1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>RDUAT1</label>
+        <sharedTo>
+            <group>RDUAT1</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>RDUAT1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4342</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>RDUAT2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>RDUAT2</label>
+        <sharedTo>
+            <group>RDUAT2</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>RDUAT2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4343</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>RRD_UAT</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>RRD UAT</label>
+        <sharedTo>
+            <group>RRD_UAT</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>RRD UAT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4340</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SC_East</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SC East</label>
+        <sharedTo>
+            <group>SC_East</group>
+        </sharedTo>
+        <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Area_State__c</field>
+            <operation>equals</operation>
+            <value>Chhattisgarh,Arunachal Pradesh,Assam,Manipur,Meghalaya,Mizoram,Nagaland,Sikkim,Tripura,Bihar,Jharkhand,Odisha,West Bengal,Andaman and Nicobar Islands</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>Chhattisgarh,Arunachal Pradesh,Assam,Manipur,Meghalaya,Mizoram,Nagaland,Sikkim,Tripura,Bihar,Jharkhand,Odisha,West Bengal,Andaman and Nicobar Islands</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Seller Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Created_From__c</field>
+            <operation>notEqual</operation>
+            <value>ncd</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>SC_Duplicates</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HI_Serviceable__c</field>
+            <operation>equals</operation>
+            <value>No</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SC_North</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SC North</label>
+        <sharedTo>
+            <group>SC_North</group>
+        </sharedTo>
+        <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Area_State__c</field>
+            <operation>equals</operation>
+            <value>Jammu &amp; Kashmir,Himachal Pradesh,Punjab,Uttarakhand,Haryana,Delhi,Rajasthan,Uttar Pradesh,Chandigarh,Ladakh,Uttarakhand</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>Jammu &amp; Kashmir,Himachal Pradesh,Punjab,Uttarakhand,Haryana,Delhi,Rajasthan,Uttar Pradesh,Chandigarh,Ladakh,Uttarakhand</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Created_From__c</field>
+            <operation>notEqual</operation>
+            <value>ncd</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Seller Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>SC_Duplicates</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HI_Serviceable__c</field>
+            <operation>equals</operation>
+            <value>No</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SC_South</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SC South</label>
+        <sharedTo>
+            <group>SC_South</group>
+        </sharedTo>
+        <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Area_State__c</field>
+            <operation>equals</operation>
+            <value>Andhra Pradesh,Kerala,Tamil Nadu,Karnataka,Telengana,Lakshadweep,Puducherry,Telangana</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>Andhra Pradesh,Kerala,Tamil Nadu,Karnataka,Telengana,Lakshadweep,Puducherry,Telangana</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Created_From__c</field>
+            <operation>equals</operation>
+            <value>ncd</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Seller Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>SC_Duplicates</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HI_Serviceable__c</field>
+            <operation>equals</operation>
+            <value>No</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SC_West</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SC West</label>
+        <sharedTo>
+            <group>SC_West</group>
+        </sharedTo>
+        <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Area_State__c</field>
+            <operation>equals</operation>
+            <value>Dadra &amp; Nagar Haveli,Daman &amp; Diu,Goa,Gujarat,Maharashtra,Rajasthan,Madhya Pradesh</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>State__c</field>
+            <operation>equals</operation>
+            <value>Dadra &amp; Nagar Haveli,Daman &amp; Diu,Goa,Gujarat,Maharashtra,Rajasthan,Madhya Pradesh</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Created_From__c</field>
+            <operation>notEqual</operation>
+            <value>ncd</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Seller Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Owner__c</field>
+            <operation>notEqual</operation>
+            <value>SC_Duplicates</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HI_Serviceable__c</field>
+            <operation>equals</operation>
+            <value>No</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Select_Nagpur</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Select - Nagpur</label>
+        <sharedTo>
+            <group>Select_Nagpur</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>Select - Nagpur</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>2117</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Select_Pune</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Select - Pune</label>
+        <sharedTo>
+            <group>Select_Pune</group>
+        </sharedTo>
+        <booleanFilter>1 AND ( 2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>Select - Pune</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>2453</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Superstore_UAT</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Superstore UAT</label>
+        <sharedTo>
+            <group>Superstore_UAT</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>Superstore UAT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4339</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Thane_Superstore</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Thane Superstore</label>
+        <sharedTo>
+            <group>Thane_Superstore</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>Thane Superstore</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4312</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Vinayak_Autolink_Private_Limited</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Vinayak Autolink Private Limited</label>
+        <sharedTo>
+            <group>Vinayak_Autolink_Private_Limited</group>
+        </sharedTo>
+        <booleanFilter>1 AND ( 2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>Vinayak Autolink Private Limited</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4402</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>XUAT</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>XUAT</label>
+        <sharedTo>
+            <group>XUAT</group>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Buyer Used Car</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DealerName__c</field>
+            <operation>equals</operation>
+            <value>XUAT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Dealer_Code__c</field>
+            <operation>equals</operation>
+            <value>4341</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

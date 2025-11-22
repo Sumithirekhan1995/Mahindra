@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Email_Escalation</name>
+        <label>Email Escalation</label>
+        <locationX>441</locationX>
+        <locationY>402</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Email_Escalation_Check_box</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>emailTemp</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>sarthak@quadrafort.com,BHARGAVA.ASHITA@mahindra.com,AMULYA.VEERAMASU@mahindra.com,PAWAR.DEEPAK3@mahindra.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Store CRE Not Connected After 3 attempts</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalation_0</name>
+        <label>Email Escalation</label>
+        <locationX>1126</locationX>
+        <locationY>381</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Email_Escalation_Sent_2</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>emalTemp2</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>sarthak@quadrafort.com,BHARGAVA.ASHITA@mahindra.com,AMULYA.VEERAMASU@mahindra.com,PAWAR.DEEPAK3@mahindra.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Store CRE Not Connected After 2 attempts</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <name>Dicision</name>
+        <label>Dicision</label>
+        <locationX>774</locationX>
+        <locationY>390</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_Status_is_3_not_connected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Drop_Counter__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>3.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email_Escalation_Sent__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalation</targetReference>
+            </connector>
+            <label>If Status is 3 not connected</label>
+        </rules>
+        <rules>
+            <name>If_Status_is_2_not_connected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Drop_Counter__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>2.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email_Escalation_Sent_2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalation_0</targetReference>
+            </connector>
+            <label>If Status is 2 not connected</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Email Escalation rule for Superstore {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Email Escalation rule for Superstore</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Email_Escalation_Check_box</name>
+        <label>Update Email Escalation Check box</label>
+        <locationX>782</locationX>
+        <locationY>661</locationY>
+        <connector>
+            <targetReference>Dicision</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Email_Escalation_Sent__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Email_Escalation_Sent_2</name>
+        <label>Update Email Escalation Sent 2</label>
+        <locationX>1108</locationX>
+        <locationY>614</locationY>
+        <connector>
+            <targetReference>Dicision</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Email_Escalation_Sent_2__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>650</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Dicision</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <textTemplates>
+        <name>emailTemp</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi,
+Please find the details of below lead which was not attempted after 3 attempts.
+Store/Dealer account name: {!$Record.Dealer__r.Name}
+Customer name: {!$Record.Lead_Name__c}
+Mobile number: {!$Record.Customer_Phone__c}
+Status of lead: {!$Record.status__c}
+Activity Owner Names:</text>
+    </textTemplates>
+    <textTemplates>
+        <name>emalTemp2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi,
+Please find the details of below lead which was not attempted after 2 attempts.
+Store/Dealer account name: {!$Record.Dealer__r.Name}
+Customer name: {!$Record.Lead_Name__c}
+Mobile number: {!$Record.Customer_Phone__c}
+Status of lead: {!$Record.status__c}
+Activity Owner Names:</text>
+    </textTemplates>
+</Flow>

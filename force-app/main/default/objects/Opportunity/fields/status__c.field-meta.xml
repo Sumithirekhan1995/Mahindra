@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hot</fullName>
+                <color>#000000</color>
+                <default>false</default>
+                <label>Hot</label>
+            </value>
+            <value>
+                <fullName>Call Back</fullName>
+                <default>false</default>
+                <label>Call Back</label>
+            </value>
+            <value>
+                <fullName>Test Drive</fullName>
+                <color>#FF6600</color>
+                <default>false</default>
+                <label>Test Drive</label>
+            </value>
+            <value>
+                <fullName>Test Drive Rescheduled</fullName>
+                <default>false</default>
+                <label>Test Drive Rescheduled</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <color>#FF0000</color>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Warm</fullName>
+                <color>#FF6600</color>
+                <default>false</default>
+                <label>Warm</label>
+            </value>
+            <value>
+                <fullName>Cold</fullName>
+                <color>#006600</color>
+                <default>false</default>
+                <label>Cold</label>
+            </value>
+            <value>
+                <fullName>Not interested</fullName>
+                <default>false</default>
+                <label>Not interested</label>
+            </value>
+            <value>
+                <fullName>Lost</fullName>
+                <default>false</default>
+                <label>Lost</label>
+            </value>
+            <value>
+                <fullName>Visiting</fullName>
+                <default>false</default>
+                <label>Visiting</label>
+            </value>
+            <value>
+                <fullName>Search</fullName>
+                <default>false</default>
+                <label>Search</label>
+            </value>
+            <value>
+                <fullName>Finalised</fullName>
+                <color>#009900</color>
+                <default>false</default>
+                <label>Finalised</label>
+            </value>
+            <value>
+                <fullName>No response</fullName>
+                <color>#CC66CC</color>
+                <default>false</default>
+                <label>No response</label>
+            </value>
+            <value>
+                <fullName>Walk-in</fullName>
+                <default>false</default>
+                <label>Walk-in</label>
+            </value>
+            <value>
+                <fullName>Do Not Call</fullName>
+                <default>false</default>
+                <label>Do Not Call</label>
+            </value>
+            <value>
+                <fullName>Number Busy</fullName>
+                <default>false</default>
+                <label>Number Busy</label>
+            </value>
+            <value>
+                <fullName>Invalid Number</fullName>
+                <default>false</default>
+                <label>Invalid Number</label>
+            </value>
+            <value>
+                <fullName>Interested in New Car</fullName>
+                <default>false</default>
+                <label>Interested in New Car</label>
+            </value>
+            <value>
+                <fullName>Interested in CV</fullName>
+                <default>false</default>
+                <label>Interested in CV</label>
+            </value>
+            <value>
+                <fullName>Switched Off Not Reachable</fullName>
+                <color>#FF6666</color>
+                <default>false</default>
+                <label>Switched Off Not Reachable</label>
+            </value>
+            <value>
+                <fullName>Pre-Sale Complaint</fullName>
+                <default>false</default>
+                <label>Pre-Sale Complaint</label>
+            </value>
+            <value>
+                <fullName>Dispute at dealership</fullName>
+                <default>false</default>
+                <label>Dispute at dealership</label>
+            </value>
+            <value>
+                <fullName>Language Issue</fullName>
+                <default>false</default>
+                <label>Language Issue</label>
+            </value>
+            <value>
+                <fullName>Sold</fullName>
+                <color>#000099</color>
+                <default>false</default>
+                <label>Sold</label>
+            </value>
+            <value>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+                <label>Follow up</label>
+            </value>
+            <value>
+                <fullName>Open</fullName>
+                <color>#FF9966</color>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+                <label>Assigned</label>
+            </value>
+            <value>
+                <fullName>Rejected by valuator</fullName>
+                <default>false</default>
+                <label>Rejected by valuator</label>
+            </value>
+            <value>
+                <fullName>Rejected before evaluation</fullName>
+                <default>false</default>
+                <label>Rejected before evaluation</label>
+            </value>
+            <value>
+                <fullName>Evaluated</fullName>
+                <default>false</default>
+                <label>Evaluated</label>
+            </value>
+            <value>
+                <fullName>Live</fullName>
+                <default>false</default>
+                <label>Live</label>
+            </value>
+            <value>
+                <fullName>Live completed</fullName>
+                <default>false</default>
+                <label>Live completed</label>
+            </value>
+            <value>
+                <fullName>Live follow-up</fullName>
+                <default>false</default>
+                <label>Live follow-up</label>
+            </value>
+            <value>
+                <fullName>Live rejected</fullName>
+                <default>false</default>
+                <label>Live rejected</label>
+            </value>
+            <value>
+                <fullName>Live deal closure</fullName>
+                <default>false</default>
+                <label>Live deal closure</label>
+            </value>
+            <value>
+                <fullName>Live soldout</fullName>
+                <default>false</default>
+                <label>Live soldout</label>
+            </value>
+            <value>
+                <fullName>Valuator to be assigned</fullName>
+                <default>false</default>
+                <label>Valuator to be assigned</label>
+            </value>
+            <value>
+                <fullName>CC Hot</fullName>
+                <default>false</default>
+                <label>CC Hot</label>
+            </value>
+            <value>
+                <fullName>More Info</fullName>
+                <default>false</default>
+                <label>More Info</label>
+            </value>
+            <value>
+                <fullName>DO Done</fullName>
+                <default>false</default>
+                <label>DO Done</label>
+            </value>
+            <value>
+                <fullName>New Agreement Number</fullName>
+                <default>false</default>
+                <label>New Agreement Number</label>
+            </value>
+            <value>
+                <fullName>New Application Number</fullName>
+                <default>false</default>
+                <label>New Application Number</label>
+            </value>
+            <value>
+                <fullName>Pending at CC</fullName>
+                <default>false</default>
+                <label>Pending at CC</label>
+            </value>
+            <value>
+                <fullName>Referrer Call</fullName>
+                <default>false</default>
+                <label>Referrer Call</label>
+            </value>
+            <value>
+                <fullName>Executive Call</fullName>
+                <default>false</default>
+                <label>Executive Call</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Clash</fullName>
+                <default>false</default>
+                <label>Clash</label>
+            </value>
+            <value>
+                <fullName>Vehicle Sold</fullName>
+                <default>false</default>
+                <label>Vehicle Sold</label>
+            </value>
+            <value>
+                <fullName>Damage</fullName>
+                <default>false</default>
+                <label>Damage</label>
+            </value>
+            <value>
+                <fullName>Police Station</fullName>
+                <default>false</default>
+                <label>Police Station</label>
+            </value>
+            <value>
+                <fullName>Will Back by his Own</fullName>
+                <default>false</default>
+                <label>Will Back by his Own</label>
+            </value>
+            <value>
+                <fullName>Dispute Cases</fullName>
+                <default>false</default>
+                <label>Dispute Cases</label>
+            </value>
+            <value>
+                <fullName>Already Cleared the Dues</fullName>
+                <default>false</default>
+                <label>Already Cleared the Dues</label>
+            </value>
+            <value>
+                <fullName>Need Settlement for Dues</fullName>
+                <default>false</default>
+                <label>Need Settlement for Dues</label>
+            </value>
+            <value>
+                <fullName>Assign for Evaluation</fullName>
+                <default>false</default>
+                <label>Assign for Evaluation</label>
+            </value>
+            <value>
+                <fullName>Evaluation Rejected</fullName>
+                <default>false</default>
+                <label>Evaluation Rejected</label>
+            </value>
+            <value>
+                <fullName>Awaiting For Price Quote</fullName>
+                <default>false</default>
+                <label>Awaiting For Price Quote</label>
+            </value>
+            <value>
+                <fullName>Quote Given To MMFSL</fullName>
+                <default>false</default>
+                <label>Quote Given To MMFSL</label>
+            </value>
+            <value>
+                <fullName>Dues Settlement After Quotation</fullName>
+                <default>false</default>
+                <label>Dues Settlement After Quotation</label>
+            </value>
+            <value>
+                <fullName>Quote Given But Reject</fullName>
+                <default>false</default>
+                <label>Quote Given But Reject</label>
+            </value>
+            <value>
+                <fullName>Yet to Call</fullName>
+                <default>false</default>
+                <label>Yet to Call</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>Interested - Hot</label>
+            </value>
+            <value>
+                <fullName>8</fullName>
+                <default>false</default>
+                <label>Interested - Warm</label>
+            </value>
+            <value>
+                <fullName>9</fullName>
+                <default>false</default>
+                <label>Interested - Cold</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>Call Later</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <label>Not Reachable</label>
+            </value>
+            <value>
+                <fullName>4</fullName>
+                <default>false</default>
+                <label>Didnot pickup</label>
+            </value>
+            <value>
+                <fullName>5</fullName>
+                <default>false</default>
+                <label>Force Close</label>
+            </value>
+            <value>
+                <fullName>10</fullName>
+                <default>false</default>
+                <label>Not exists</label>
+            </value>
+            <value>
+                <fullName>7</fullName>
+                <default>false</default>
+                <label>Already purchased</label>
+            </value>
+            <value>
+                <fullName>6</fullName>
+                <default>false</default>
+                <label>No Interest</label>
+            </value>
+            <value>
+                <fullName>11</fullName>
+                <default>false</default>
+                <label>Wrong Numbers</label>
+            </value>
+            <value>
+                <fullName>Escalation</fullName>
+                <default>false</default>
+                <label>Escalation</label>
+            </value>
+            <value>
+                <fullName>Evaluated with report link</fullName>
+                <default>false</default>
+                <label>Evaluated with report link</label>
+            </value>
+            <value>
+                <fullName>Rescheduled</fullName>
+                <default>false</default>
+                <label>Rescheduled</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Onboarding</fullName>
+                <default>false</default>
+                <label>Login Done</label>
+            </value>
+            <value>
+                <fullName>Onboarded</fullName>
+                <default>false</default>
+                <label>SL Received</label>
+            </value>
+            <value>
+                <fullName>Closed (Incentive eligible)</fullName>
+                <default>false</default>
+                <label>Ready For Disbursal</label>
+            </value>
+            <value>
+                <fullName>Dropped/Lost</fullName>
+                <default>false</default>
+                <label>Dropped/Lost</label>
+            </value>
+            <value>
+                <fullName>Already Converted</fullName>
+                <default>false</default>
+                <label>Already Converted</label>
+            </value>
+            <value>
+                <fullName>Wrong No</fullName>
+                <default>false</default>
+                <label>Wrong No</label>
+            </value>
+            <value>
+                <fullName>Unbooked</fullName>
+                <default>false</default>
+                <label>Unbooked</label>
+            </value>
+            <value>
+                <fullName>Under Query</fullName>
+                <default>false</default>
+                <label>Under Query</label>
+            </value>
+            <value>
+                <fullName>Pre-filled agreement issued</fullName>
+                <default>false</default>
+                <label>Pre-filled agreement issued</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+                <label>Qualified</label>
+            </value>
+            <value>
+                <fullName>Visit Scheduled</fullName>
+                <default>false</default>
+                <label>Visit Scheduled</label>
+            </value>
+            <value>
+                <fullName>Visit Rescheduled</fullName>
+                <default>false</default>
+                <label>Visit Rescheduled</label>
+            </value>
+            <value>
+                <fullName>Test Drive Scheduled</fullName>
+                <default>false</default>
+                <label>Test Drive Scheduled</label>
+            </value>
+            <value>
+                <fullName>Test Drive Completed</fullName>
+                <default>false</default>
+                <label>Test Drive Completed</label>
+            </value>
+            <value>
+                <fullName>Language barrier</fullName>
+                <default>false</default>
+                <label>Language barrier</label>
+            </value>
+            <value>
+                <fullName>Searching</fullName>
+                <default>false</default>
+                <label>Searching</label>
+            </value>
+            <value>
+                <fullName>Under Discussion</fullName>
+                <default>false</default>
+                <label>Under Discussion</label>
+            </value>
+            <value>
+                <fullName>Vehicle Booked</fullName>
+                <default>false</default>
+                <label>Vehicle Booked</label>
+            </value>
+            <value>
+                <fullName>Appointment Cancelled</fullName>
+                <default>false</default>
+                <label>Appointment Cancelled</label>
+            </value>
+            <value>
+                <fullName>Engineer Assigned</fullName>
+                <default>false</default>
+                <label>Engineer Assigned</label>
+            </value>
+            <value>
+                <fullName>Appointment booked</fullName>
+                <default>false</default>
+                <label>Appointment Booked</label>
+            </value>
+            <value>
+                <fullName>Inspection Done</fullName>
+                <default>false</default>
+                <label>Inspection Done</label>
+            </value>
+            <value>
+                <fullName>Still planning to buy but no vehicle finalised yet</fullName>
+                <default>false</default>
+                <label>Still planning to buy but no vehicle finalised yet</label>
+            </value>
+            <value>
+                <fullName>Not answering</fullName>
+                <default>false</default>
+                <label>Not answering</label>
+            </value>
+            <value>
+                <fullName>Reschedule</fullName>
+                <default>false</default>
+                <label>Reschedule</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

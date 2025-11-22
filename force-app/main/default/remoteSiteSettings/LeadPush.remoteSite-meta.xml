@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>https://lms-api.prodibb.com/public/api/crm_sfdc/generateAccessToken</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://lms-api.prodibb.com</url>
+</RemoteSiteSetting>

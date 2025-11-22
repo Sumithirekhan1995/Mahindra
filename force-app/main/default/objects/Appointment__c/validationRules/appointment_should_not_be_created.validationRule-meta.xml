@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>appointment_should_not_be_created</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( ISNEW(),
+ ISPICKVAL( Opportunity__r.status__c , &apos;Sold&apos;) , 
+NOT(ISBLANK( Scheduled_Time__c )) )</errorConditionFormula>
+    <errorMessage>Appointment can&apos;t be created on sold followup leads.</errorMessage>
+</ValidationRule>

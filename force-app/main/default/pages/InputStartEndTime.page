@@ -1,0 +1,27 @@
+<apex:page controller="VFController" applyBodyTag="false" lightningStylesheets="true" docType="html-5.0">
+
+    <apex:slds />
+    <apex:form styleClass="slds-scope">
+         Start time:
+        <apex:input value="{!inputOne}" styleClass="slds-input slds-m-around_small" type="datetime-local" />
+       
+        End Time:
+        <apex:input value="{!inputTwo}" styleClass="slds-input slds-m-around_small" type="datetime-local" />
+        <apex:commandButton action="{!submit}" value="Submit" />
+        <apex:commandButton action="{!pushToElision}" value="Push to Elision" />
+        
+        </apex:form>
+    <apex:pageBlock title="List of Leads">
+    <apex:pageBlockTable value="{!leadList1}" var="item1">
+        <apex:column value="{!item1.Id}"/>
+        <apex:column value="{!item1.FirstName}"/>
+		<apex:column value="{!item1.LastName}"/>
+        <apex:column value="{!item1.Status}"/>
+        <apex:column value="{!item1.Status__c}"/>
+        <apex:column value="{!item1.Phone}"/>
+        <apex:column value="{!item1.HI_Serviceable__c}"/>
+        <apex:column value="{!item1.Seller_City__c}"/>
+
+    </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

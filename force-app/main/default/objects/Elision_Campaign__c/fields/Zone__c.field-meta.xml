@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zone__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(UPPER( State__c ) =UPPER(&apos;Rajasthan&apos;),&apos;West&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Madhya Pradesh&apos;),&apos;West&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Gujarat&apos;),&apos;West&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Daman and Diu&apos;),&apos;West&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Dadra and Nagar Haveli&apos;),&apos;West&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Maharashtra&apos;),&apos;West&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Goa&apos;),&apos;West&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Andhra Pradesh&apos;),&apos;South&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Karnataka&apos;),&apos;South&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Lakshadweep&apos;),&apos;South&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Kerala&apos;),&apos;South&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Tamil Nadu&apos;),&apos;South&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Puducherry&apos;),&apos;South&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Andaman and Nicobar&apos;),&apos;South&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Jammu And Kashmir&apos;),&apos;North&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Himachal Pradesh&apos;),&apos;North&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Punjab&apos;),&apos;North&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Chandigarh&apos;),&apos;North&apos;,
+IF(UPPER(State__c) =UPPER(&apos;uttarakhand&apos;),&apos;North&apos;,
+IF(UPPER(State__c) =UPPER(&apos;haryana&apos;),&apos;North&apos;,
+IF(UPPER(State__c) =UPPER(&apos;delhi&apos;),&apos;North&apos;,
+IF(UPPER(State__c) =UPPER(&apos;uttar pradesh&apos;),&apos;North&apos;,
+IF(UPPER(State__c) =UPPER(&apos;JHARKHAND&apos;),&apos;East&apos;,
+IF(UPPER(State__c) =UPPER(&apos;West Bengal&apos;),&apos;East&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Mizoram&apos;),&apos;East&apos;,
+IF(UPPER(State__c) =UPPER(&apos;Odisha&apos;),&apos;East&apos;,
+IF(UPPER(State__c) =UPPER(&apos;orissa&apos;),&apos;East&apos;,
+IF(UPPER(State__c) =UPPER(&apos;bihar&apos;),&apos;East&apos;,
+IF(UPPER(State__c) =UPPER(&apos;sikkim&apos;),&apos;East&apos;,
+IF(UPPER(State__c) =UPPER(&apos;arunachal pradesh&apos;),&apos;East&apos;,
+IF(UPPER(State__c) =UPPER(&apos;NAGALAND&apos;),&apos;East&apos;,&apos;&apos;)
+))))))))))))))))))))))))))))))</formula>
+    <label>Zone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

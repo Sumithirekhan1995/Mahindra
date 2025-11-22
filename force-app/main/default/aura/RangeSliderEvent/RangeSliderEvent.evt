@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION">
+    <aura:attribute name="minRange" type="integer"/>
+    <aura:attribute name="maxRange" type="integer"/>
+    <aura:attribute name="name" type="String"/>
+</aura:event>

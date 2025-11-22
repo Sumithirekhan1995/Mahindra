@@ -1,0 +1,271 @@
+<aura:component controller="EntitySearchController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:handler event="c:SearchRelevantEntityEvent" action="{!c.handleSearchEventChange}" />
+    <!-- Line 5,8,9,117,118,  added by Aravindan -->
+    <aura:handler event="c:setNull" action="{!c.setStockOrDealerToNull}" /> 
+    <aura:attribute name="productList" type="List" description = "All Products that match the search condition"/>
+    <aura:attribute name="productList1" type="List" description = "All Products that match the search condition"/>
+    <aura:attribute name="dealerList1" type="List" description = "All Account that match the search condition"/>
+    <aura:attribute name="dealerList" type="List" description = "All Account that match the search condition"/>
+    <aura:attribute name="isSelectAll" type="boolean" default="false"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="pageOnLoadStock" type="boolean" default="false"/>
+    <aura:attribute name="pageOnLoadDealer" type="boolean" default="false"/>
+    <aura:attribute name="showStockList" type="Boolean" default="false"/>
+    <aura:attribute name="showDealerList" type="Boolean" default="true"/>
+    <aura:attribute name="searchType" type="String" default="Dealer"/>
+    <aura:attribute name="selectedMake" type="String" default=""/>
+    <aura:attribute name="selectedModel" type="String" default=""/>
+    <aura:attribute name="ifNotSelected" type="boolean" default="false" />
+    <aura:attribute name="spinner" type="boolean" default="false"/>
+    <aura:attribute name="disableNext" type="boolean" default="false"/>
+    <aura:attribute name="disableNextDealer" type="boolean" default="false"/>
+    <aura:attribute name="pageSize" type="Integer" default="10"/>
+    <aura:attribute name="totalSize" type="Integer"/>
+    <aura:attribute name="start" type="Integer" />
+    <aura:attribute name="end" type="Integer"/>
+    
+    <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <h3><span class="slds-section__title" style="font-weight: bold;"></span></h3>
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.showStockList}">
+        
+        <aura:if isTrue="{!v.productList.length > 0}"> 
+            
+            <div class="slds-m-around_xx-large">
+                <h1 class="slds-text-heading--medium">Stock List</h1>
+                <br/>
+                <!-- <div align="center">
+                    <br/>
+                    <lightning:button label="Submit" class="slds-button_brand" onclick="{!c.handleSelectedProducts}"  />
+                </div> -->
+                <div class="slds-scrollable" style="height:100%;">
+                    <table width = "150%" class="slds-table slds-table_cell-buffer slds-table_fixed-layout slds-max-medium-table_stacked-horizontal slds-table_bordered" role="grid">      
+                        <thead>  
+                            <tr class="slds-text-title--caps">
+                                <th>           
+                                    <label class="slds-checkbox">
+                                        <ui:inputCheckbox value="{!v.isSelectAll}" change="{!c.handleSelectAllProduct}" aura:id="selectAll"/>
+                                        <span class="slds-checkbox--faux" />
+                                        <span class="slds-form-element__label"></span>
+                                    </label>
+                                </th>
+                                
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Make">Make</div>
+                                </th>
+                                
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Model">Model</div>
+                                </th>
+                                
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Variant">Variant</div>
+                                </th>
+                                
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Dealer">Dealer</div>
+                                </th>
+                                
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Expected Price">Expected Price</div>
+                                </th>
+                                
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Fuel">Fuel</div>
+                                </th>
+                                
+                            <!--06-03-2023--> 
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="TransmissionType">TransmissionType</div>
+                                </th>
+                            <!--06-03-2023-->
+                                
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Kilometers">Kilometers</div>
+                                </th>
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Owner">Owner</div>
+                                </th>
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="City">City</div>
+                                </th>
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Vehicle Registration No.">Vehicle Registration No.</div>
+                                </th>
+                                <th>
+                                    <div class="slds-truncate" title="More Information">More Information</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>        
+                            <aura:iteration items="{!v.productList}" var="product">
+                                <tr>
+                                    <th>
+                                        <label class="slds-checkbox">
+                                            <ui:inputCheckbox aura:id="checkProduct" disabled="{!product.IsActive != True}"  name ="{!product.Id}" value="{!product.check}" text="{!product.Id}" click="{!c.makeTrue}"  />
+                                            <span class="slds-checkbox--faux" />
+                                            <span class="slds-form-element__label"></span>
+                                        </label>
+                                    </th>
+                                    <th scope="row">
+                                        <div class="slds-truncate" title="{!product.Make__c}">{!product.Make__c}</div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate" title="{!product.Model__c}">{!product.Model__c}</div>
+                                    </td>
+                                    <th scope="row">
+                                        <div class="slds-truncate" title="{!product.Variant__c}">{!product.Variant__c}</div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate" title="{!product.Dealer_Name__r.Name}">{!product.Dealer_Name__r.Name}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate" title="{!product.Expected_Price__c}">₹ {!product.Expected_Price__c}</div>
+                                        
+                                    </td>
+                                    <td>
+                                        <div class="slds-scrollable--y" title="{!product.Fuel__c}">{!product.Fuel__c}</div>
+                                    </td>
+                                    <!--06-03-2023-->
+                                    <td>
+                                        <div class="slds-scrollable--y" title="{!product.TransmissionType__c}">{!product.TransmissionType__c}</div>
+                                    </td>
+                                    <!--06-03-2023-->
+                                    <td>
+                                        <div class="slds-truncate" title="{!product.Kilometer__c}">{!product.Kilometer__c}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate" title="{!product.No_of_Owners__c}">{!product.No_of_Owners__c}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate" title="{!product.MFC_Dealer_City__c}">{!product.MFC_Dealer_City__c}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate" title="{!product.Registration_Number__c}">{!product.Registration_Number__c}</div>
+                                    </td>
+                                    <td>
+                                        <lightning:helptext content="{!'Dealer State :'+ product.MFC_Dealer_State__c+', Pincode : '+product.MFC_Dealer_PinCode__c+', Body Type: '+product.Body_Type__c+', Color : '+product.Color__c+', Manufacture Month, Year: '+product.Model_Month__c+','+product.Model_Year__c+', Warranty Recommended: '+product.Warranty_Recommended__c}"/>
+                                    </td>
+                                </tr>
+                            </aura:iteration>
+                            <br/>
+                            <br/>
+                            <!-- <lightning:button label="First" disabled="{!v.start == 0}"  onclick="{!c.first}" /> -->
+                            <!--  <lightning:button label="Last" disabled="{!v.end >= v.totalSize}" onclick="{!c.last}" /> -->
+                        </tbody>	
+                    </table>  
+                </div>
+                <div align="center">
+                    <lightning:button label="Previous" disabled="{!v.start == 0}"  onclick="{!c.previous}" />
+                    <lightning:button label="Next" disabled="{!v.disableNext}" onclick="{!c.next}" />
+                </div>
+                <div align="center">
+                    <br/>
+                    <lightning:button label="Submit" class="slds-button_brand" onclick="{!c.handleSelectedProducts}"  />
+                    
+                </div>
+                
+            </div>
+        </aura:if>     
+        
+        <aura:if isTrue="{!and(lessthan(v.productList.length,1),v.pageOnLoadStock)}"> 
+            
+            <lightning:layoutItem size="12">
+                <h2 style = "text-align: center; font-weight:bold; padding: 50px;">No Stock Match</h2>
+            </lightning:layoutItem>
+        </aura:if>
+    </aura:if>
+    <aura:if isTrue="{!v.showDealerList}">
+        <aura:if isTrue="{!v.dealerList.length > 0}"> 
+            
+            <div class="slds-m-around_xx-large">
+                <h1 class="slds-text-heading--medium">Dealer List</h1>
+                <br/>
+                <!-- <div align="center">
+                    <br/>
+                    <lightning:button label="Submit" class="slds-button_brand" onclick="{!c.handleSelectedDealers}"  />
+                </div> -->
+                <div class="slds-scrollable" style="height:100%;">
+                    <table class="slds-table slds-table_cell-buffer slds-table_fixed-layout slds-max-medium-table_stacked-horizontal slds-table_bordered" role="grid">      
+                        <thead>  
+                            <tr class="slds-text-title--caps">
+                                <th>           
+                                    <label class="slds-checkbox">
+                                        <ui:inputCheckbox value="{!v.isSelectAll}" change="{!c.handleSelectAllProduct}" aura:id="selectAll"/>
+                                        <span class="slds-checkbox--faux" />
+                                        <span class="slds-form-element__label"></span>
+                                    </label>
+                                </th>
+                                
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Name">Name</div>
+                                </th>
+                                
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Code">Code</div>
+                                </th>
+                                <th class="slds-is-sortable" scope="col">
+                                    <div class="slds-truncate" title="Address">Address</div>
+                                </th>
+                                <!--th>
+                                <div class="slds-truncate" title="More Information">More Information</div>
+                            </th-->
+                            </tr>
+                        </thead>
+                        <tbody>        
+                            <aura:iteration items="{!v.dealerList}" var="dealer">
+                                <tr>
+                                    <th>
+                                        <label class="slds-checkbox">
+                                            <ui:inputCheckbox aura:id="checkProduct" disabled="{!dealer.Active__c != True}" value="{!dealer.check}" name="{!dealer.Id}" text="{!dealer.Id}" click="{!c.makeTrueDealer}"/>
+                                            <span class="slds-checkbox--faux" />
+                                            <span class="slds-form-element__label"></span>
+                                        </label>
+                                    </th>
+                                    <th scope="row">
+                                        <div class="slds-truncate" title="{!dealer.Name}">{!dealer.Name}</div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate" title="{!dealer.Code__c}">{!dealer.Code__c}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-text-body_regular" title="{!dealer.BillingCity}">{!dealer.BillingStreet},<br/> {!dealer.BillingCity},{!dealer.BillingState}, {!dealer.BillingPostalCode}</div>
+                                    </td>
+                                    <!--td>
+                                    <lightning:helptext content="{!'Dealer City :'+ product.MFC_Dealer_City__c+', Pincode : '+product.MFC_Dealer_PinCode__c+', Body Type: '+product.Body_Type__c+', Color : '+product.Color__c+', Manufacture Month, Year: '+product.Model_Month__c+','+product.Model_Year__c}"/>
+                                </td-->
+                                </tr>
+                            </aura:iteration>
+                            <br/>
+                            <br/>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div align="center">
+                    
+                    <lightning:button label="Previous" disabled="{!v.start == 0}"  onclick="{!c.previousDealer}" />
+                    <lightning:button label="Next" disabled="{!v.disableNextDealer}" onclick="{!c.nextDealer}" />
+                </div>
+                <div align="center">
+                    <br/>
+                    <lightning:button label="Submit" class="slds-button_brand" onclick="{!c.handleSelectedDealers}"  />
+                </div>     
+          </div>
+        </aura:if>
+        
+        <aura:if isTrue="{!and(lessthan(v.dealerList.length,1),v.pageOnLoadDealer)}">
+            <lightning:layoutItem size="12">
+                <h2 style = "text-align: center; font-weight:bold; padding: 50px;">No Dealer Match</h2>
+            </lightning:layoutItem>
+        </aura:if>
+    </aura:if>
+</aura:component>

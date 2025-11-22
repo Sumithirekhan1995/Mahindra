@@ -1,0 +1,60 @@
+<aura:component controller="SMSDisplayController" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	<aura:attribute type="List" name="objectNames"/>
+    <aura:attribute type="List" name="contactNames"/>
+    <aura:attribute type="String" name="objName"/>
+    <aura:attribute type="String" name="objLabel"/>
+    <aura:attribute type="String" name="selectedPhone"/>
+    <aura:attribute type="String" name="selectedValue"/>
+    <aura:attribute type="map" name="objectMap"/>
+    <aura:attribute type="map" name="contactMap"/>
+    <aura:attribute type="String" name="errorMessage" default="some error"/>
+    <aura:attribute type="Boolean" name="isError" default="false"/>
+    <aura:attribute name="checkboxOptions" type="List" default="[
+    {'label': 'SMS', 'value': 'SMS'},
+    {'label': 'Whatsapp', 'value': 'Whatsapp'}
+    ]"/>
+    <aura:attribute name="checkboxValue" type="List" default="['SMS','Whatsapp']"/>
+
+    
+    <aura:attribute type="String" name="templateText" default="--None--"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div class="slds-box slds-theme_default">
+        <aura:if isTrue="{!v.isError}">
+            <div class="demo-only" style="height:4rem">
+              <div class="slds-notify_container slds-is-relative">
+                <div class="slds-notify slds-notify_toast slds-theme_error" role="status">
+                  <span class="slds-assistive-text">error</span>
+                  <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small ">{!v.errorMessage}</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+      	</aura:if> 
+            
+        
+        
+        <div class="slds-grid">
+          <div class="slds-col">
+            <span><lightning:combobox value="{!v.selectedValue}" label="Select Contact" onchange="{!c.onPhoneChange}" aura:id="objectPhoneVals" options="{!v.contactNames}"  dropdownAlignment="left" variant="standard" required="true"></lightning:combobox></span>
+          </div>
+            <div class="slds-col">
+              <span>&nbsp;</span>
+          </div>
+          <div class="slds-col">
+              <span><lightning:input type="text"  readonly="true" name="input1" label="Phone Number" value="{!v.selectedPhone}"/></span>
+          </div>
+          <!--div class="slds-col">
+              <span><lightning:checkboxGroup name="Messaging Type Required"
+                             label="Messaging Type"
+                             options="{! v.checkboxOptions }"
+                             value="{! v.checkboxValue }"
+                             /></span>
+          </div-->
+        </div>
+        <lightning:combobox value="{!v.objName}" label="Select Template" onchange="{!c.onObjChange}" aura:id="objectVals" options="{!v.objectNames}"  dropdownAlignment="left" variant="standard" required="true"></lightning:combobox>
+        <br/>
+        <lightning:textarea value="{!v.templateText}" label="SMS Content" rows="10"/>
+        <center><lightning:button class="slds-theme_brand" variant="brand" label="Send" onclick="{!c.onClickSend}"></lightning:button></center>
+    </div>
+</aura:component>

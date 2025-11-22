@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>SC_F_Kerala</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>SC_Kerala</publicGroup>
+        </publicGroups>
+        <roles>
+            <role>Seller_HI_CRE</role>
+            <role>Seller_HI_TL</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

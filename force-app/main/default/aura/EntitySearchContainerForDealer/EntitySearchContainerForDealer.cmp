@@ -1,0 +1,4 @@
+<aura:component controller="EntitySearchController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+    <c:EntitySearchFilterforDealer  recordId="{!v.recordId}"/>  
+    <c:EntitySearchViewforDealer/> 
+</aura:component>

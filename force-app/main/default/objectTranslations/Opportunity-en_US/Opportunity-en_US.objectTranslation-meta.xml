@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Followup Lead</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Followup Leads</value>
+    </caseValues>
+    <layouts>
+        <layout>Autofin</layout>
+        <sections>
+            <label></label>
+            <section>Addtional Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Buyer Used Car Layout</layout>
+        <sections>
+            <label></label>
+            <section>MFCW Team Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Propensity Scoring</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Sold Stock Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Stock Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Warranty Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Finance Car</layout>
+        <sections>
+            <label></label>
+            <section>Branch Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Referrer Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New Bike</layout>
+        <sections>
+            <label></label>
+            <section>Affiliate Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>UTM Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New Car</layout>
+        <sections>
+            <label></label>
+            <section>Affiliate Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>UTM Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New Finance</layout>
+        <sections>
+            <label></label>
+            <section>Additionaal Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Branch Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Referrer Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label></label>
+            <section>Sold stock Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Stock Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Warranty Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Seller Car</layout>
+        <sections>
+            <label></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>CPT Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Evaluator Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Followup Lead Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Home Inspection Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Inspection Scheduling</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Lead Push</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Procurement Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vehicle Details</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Bulk_Change_Owner</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Change_Status</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Dealer_Visit</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Dealers_Detail</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Elision_Callback</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Follow_up</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>SMS</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Test_Drive</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Warranty_Dispute</name>
+    </quickActions>
+    <startsWith>Vowel</startsWith>
+    <workflowTasks>
+        <name>Followup_Task</name>
+        <subject></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidationOnStatus</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED(status__c),
+ISPICKVAL(PRIORVALUE(status__c), &quot;Sold&quot;),
+NOT(ISPICKVAL(status__c, &quot;Sold&quot;))
+)</errorConditionFormula>
+    <errorMessage>You do not have access to change the status value when it is Sold</errorMessage>
+</ValidationRule>
